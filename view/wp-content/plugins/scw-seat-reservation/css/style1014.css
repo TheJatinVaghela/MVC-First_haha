@@ -1,0 +1,157 @@
+
+.images {
+    width: 30% !important;
+}
+.summary.entry-summary {
+    width: 68% !important;
+}
+.smartcms_content {
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.smartcms_content_seats_item {
+    float: left;
+    margin-right: 10px;
+}
+.smartcms_content_seats_item_color {
+    display: inline-block;
+    text-indent: -9999em;
+    width: 100px;
+}
+.smartcms_content_seats_item_label {
+    font-size: 12px;
+}
+.smartcms_content_mapping {
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+}
+.smartcms_content_mapping_item {
+    float: left;
+    width: 100%;
+}
+.smartcms_content_mapping_item_con {
+    float: left;
+	text-align: center;
+	cursor: pointer;
+	padding: 2px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+}
+.srwseat_item_con_color {
+    float: left;
+    width: 100%;
+	color: #fff;
+}
+.scwhallway {
+    opacity: 0;
+    pointer-events: none;
+}
+.smartcms_content_mapping_item_con.active{
+	background: #f2c3c3 none repeat scroll 0 0;
+    border: 1px solid #ff7f00;
+}
+.smartcms_content_mapping_item_con.active .srwseat_item_con_color {
+    border: 1px solid #fff;
+}
+.smartcms_content_mapping_item_con.disable {
+    cursor: not-allowed;
+}
+.smartcms_content_schedules {
+    float: left;
+    margin-top: 10px;
+    width: 100%;
+}
+.smartcms_content_schedules_item {
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+	margin-top: 10px;
+}
+.smartcms_content_schedules_item_date {
+    background: #0F6A69 none repeat scroll 0 0;
+    padding: 3px;
+	float: left;
+}
+.smartcms_content_schedules_item_time {
+    background: #0d7091 none repeat scroll 0 0;
+    float: left;
+    padding: 3px;
+}
+.smartcms_content_schedules_item.active {
+    border: 1px solid red;
+}
+
+@media (min-width: 890px) and (max-width: 1020px) {
+	.srwseat_item_con_color {
+		font-size: 12px;
+	}
+}
+@media (min-width: 769px) and (max-width: 889px) {
+	.srwseat_item_con_color {
+		font-size: 9px;
+	}
+}
+@media (min-width: 480px) and (max-width: 768px) {
+	.woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images {
+		width: 100% !important;
+	}
+	.summary.entry-summary {
+		width: 100% !important;
+	}
+	.srwseat_item_con_color {
+		font-size: 13px;
+	}
+}
+@media (max-width: 479px) {
+	.woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images {
+		width: 100% !important;
+	}
+	.summary.entry-summary {
+		width: 100% !important;
+	}
+	.srwseat_item_con_color {
+		font-size: 7px;
+	}
+}
+
+
+.scw_sendform {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+.scw_form_item {
+    float: left;
+    width: 100%;
+	margin-top: 10px;
+}
+.scw_form_item label {
+    float: left;
+    width: 15%;
+}
+.scw_form_note_input {
+    float: left;
+    width: 240px;
+}
+.scw_form_submit {
+    margin-left: 15%;
+    background: teal;
+    color: #fff;
+    padding: 3px;
+    cursor: pointer;
+}
+.scw_total {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    color: #d41414;
+}
+.scw_total span {
+    float: left;
+}
+.smartcms_content.post {
+    float: none;
+}
