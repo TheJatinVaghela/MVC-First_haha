@@ -1,4 +1,4 @@
-<?php  require_once('/Xampp/xammp/htdocs/php/project_one/view/header.php');?>
+<?php // require_once('/Xampp/xammp/htdocs/php/project_one/view/header.php');?>
 <div id="main">
             <div id="content" class="site-content">
 
@@ -2261,4 +2261,4 @@
 
             </div>
         </div>
-        <?php  require_once('/Xampp/xammp/htdocs/php/project_one/view/footer.php');?>
+        <?php // require_once('/Xampp/xammp/htdocs/php/project_one/view/footer.php');?>
