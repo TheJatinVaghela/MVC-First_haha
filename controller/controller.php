@@ -1,22 +1,21 @@
 <?php
     class controller{
-        function __construct(){
+
+        public function __construct(){
             // echo "<pre>";
                 // print_r($_SERVER);
-                if($_SERVER)
+                if($_SERVER["PATH_INFO"])
                 {   
-                    echo "<pre>";
-                    print_r($_SERVER);
-                    echo "</pre>";
+                
                     switch ($_SERVER['PATH_INFO']) 
                     {
                         
-                        // case '/home':
-
-                        //     require_once('/Xampp/xammp/htdocs/php/project_one/view/header.php');
-                        //     require_once("/Xampp/xammp/htdocs/php/project_one/view/home.php");
-                        //     require_once("/Xampp/xammp/htdocs/php/project_one/view/footer.php");
-                        //     break;
+                         case '/home':
+                        
+                              require_once('F:/Xampp/xammp/htdocs/php/project_one/view/header.php');
+                             require_once("F:/Xampp/xammp/htdocs/php/project_one/view/home.php");
+                              require_once("F:/Xampp/xammp/htdocs/php/project_one/view/footer.php");
+                             break;
 
                         // case '/project':
                         //     require_once('view/header.php');
@@ -32,7 +31,7 @@
                 }
                 else
                 {
-                    // header('location:home');
+                     header('location:home');
                     echo "inside else";
                 }
                 // require_once('/Xampp/xammp/htdocs/php/project_one/_view/header.php');

@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<!--[if IE]><![endif]-->
-
-<!-- Mirrored from demo.amytheme.com/movie/demo/elementor-book-tickets/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Oct 2023 09:46:44 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
     <meta charset="UTF-8" />
