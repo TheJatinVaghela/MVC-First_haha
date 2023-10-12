@@ -191,7 +191,8 @@
 
 #User-id,
 #Email-id,
-#Password-id {
+#Password-id,
+#mobile-id{
 	background-color: #339aff;
 	border: none;
 	padding: 0.9rem 0.9rem;

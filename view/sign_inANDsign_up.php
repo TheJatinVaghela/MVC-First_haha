@@ -4,21 +4,22 @@
         <div class="Form_container right-panel-active">
             <!-- Sign Up -->
             <div class="container__form container--signup">
-                <form action="#" class="form" id="form1">
+                <form action="" method="post" class="form" id="form1">
                     <h2 class="form__title">Sign Up</h2>
-                    <input id="User-id"type="text" placeholder="User" class="input" />
-                    <input id="Email-id"type="email" placeholder="Email" class="input" />
-                    <input id="Password-id"type="password" placeholder="Password" class="input" />
+                    <input id="User-id"type="text" placeholder="User Name" class="input"  required/>
+                    <input id="Email-id"type="email" placeholder="User Mail" class="input"  required/>
+                    <input id="mobile-id" type="text" placeholder="User mobile" pattern="[6789][0-9]{9}" class="input"  required/>
+                    <input id="Password-id"type="password" placeholder="Password" class="input"  required/>
                     <button class="btn">Sign Up</button>
                 </form>
             </div>
             
             <!-- Sign In -->
             <div class="container__form container--signin">
-                <form action="#" class="form" id="form2">
+                <form action="" method="post" class="form" id="form2">
                     <h2 class="form__title">Sign In</h2>
-                    <input type="email" placeholder="Email" class="input" />
-                    <input type="password" placeholder="Password" class="input" />
+                    <input type="email" placeholder="Email" class="input"  required/>
+                    <input type="password" placeholder="Password" class="input"  required/>
                     <a href="#" class="link">Forgot your password?</a>
                     <button class="btn">Sign In</button>
                 </form>
