@@ -1,5 +1,8 @@
 <?php
-    class controller{
+    require_once("/Xampp/xammp/htdocs/php/project_one/model/model.php");
+    class controller extends model
+    {
+        
 
         public $wp_includes = "http://localhost/php\project_one/view/wp-includes" ;
         public $wp_content = "http://localhost/php\project_one/view/wp-content" ;
@@ -8,6 +11,7 @@
         public $jatin_made = "http://localhost/php/project_one/view/jatin-made" ;
 
         public function __construct(){
+            parent::__construct();
             // echo "<pre>";
                 // print_r($_SERVER);
                 if($_SERVER["PATH_INFO"])
@@ -47,7 +51,7 @@
 
                         default:
                             // echo "inside default";
-                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/home.php");
+                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/_404_not_found.php");
                         break;
                     }
                 }
