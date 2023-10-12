@@ -78,9 +78,9 @@
             background-image: url("http://demo.amytheme.com/movie/demo/elementor-multi-cinema/wp-content/uploads/sites/3/2022/05/bgs1.jpg") !important;
         }
     </style>
-    <link rel='stylesheet' id='wp-block-library-css' href='./wp-includes/css/dist/block-library/style.min1014.css?ver=5.9.7' type='text/css' media='all' />
-    <link rel='stylesheet' id='wc-blocks-vendors-style-css' href='./wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-stylecb57.css?ver=7.2.2' type='text/css' media='all' />
-    <link rel='stylesheet' id='wc-blocks-style-css' href='./wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-stylecb57.css?ver=7.2.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-block-library-css' href='<?php echo $this->wp_includes?>/css/dist/block-library/style.min1014.css?ver=5.9.7' type='text/css' media='all' />
+    <link rel='stylesheet' id='wc-blocks-vendors-style-css' href='<?php echo $this->wp_content?>/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-stylecb57.css?ver=7.2.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='wc-blocks-style-css' href='<?php echo $this->wp_content?>/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-stylecb57.css?ver=7.2.2' type='text/css' media='all' />
     <style id='global-styles-inline-css' type='text/css'>
         body {
             --wp--preset--color--black: #000000;
@@ -329,25 +329,25 @@
             font-size: var(--wp--preset--font-size--x-large) !important;
         }
     </style>
-    <link rel='stylesheet' id='amy-woocommerce-css' href='./wp-content/themes/amy-movie/css/vendor/woocommerceaec2.css?ver=6.4.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='amy-woocommerce-css' href='<?php echo $this->wp_content?>/themes/amy-movie/css/vendor/woocommerceaec2.css?ver=6.4.1' type='text/css' media='all' />
     <style id='woocommerce-inline-inline-css' type='text/css'>
         .woocommerce form .form-row .required {
             visibility: visible;
         }
     </style>
-    <link rel='stylesheet' id='elementor-icons-css' href='./wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min7816.css?ver=5.15.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-frontend-css' href='./wp-content/plugins/elementor/assets/css/frontend-lite.min3ab2.css?ver=3.6.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-post-4-css' href='./wp-content/uploads/sites/12/elementor/css/post-4c7ed.css?ver=1651960589' type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-global-css' href='./wp-content/uploads/sites/12/elementor/css/globalc7ed.css?ver=1651960589' type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-post-84-css' href='./wp-content/uploads/sites/12/elementor/css/post-84a575.css?ver=1651960790' type='text/css' media='all' />
-    <link rel='stylesheet' id='font-awesome-css' href='./wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min1849.css?ver=4.7.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='slick-style-css' href='./wp-content/themes/amy-movie/css/vendor/slick1014.css?ver=5.9.7' type='text/css' media='all' />
-    <link rel='stylesheet' id='slick-theme-css' href='./wp-content/themes/amy-movie/css/vendor/slick-theme1014.css?ver=5.9.7' type='text/css' media='all' />
-    <link rel='stylesheet' id='fancybox-css' href='./wp-content/themes/amy-movie/css/vendor/jquery.fancyboxf8ee.css?ver=3.5.7' type='text/css' media='all' />
-    <link rel='stylesheet' id='tooltipster-css' href='./wp-content/themes/amy-movie/css/vendor/tooltipster.bundle8a54.css?ver=1.0.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='mCustomScrollbar-css' href='./wp-content/themes/amy-movie/css/vendor/jquery.mCustomScrollbar8a54.css?ver=1.0.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='plyr-css' href='./wp-content/themes/amy-movie/css/vendor/plyr8a54.css?ver=1.0.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='amy-movie-style-css' href='./wp-content/themes/amy-movie/css/style8a54.css?ver=1.0.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-icons-css' href='<?php echo $this->wp_content?>/plugins/elementor/assets/lib/eicons/css/elementor-icons.min7816.css?ver=5.15.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-frontend-css' href='<?php echo $this->wp_content?>/plugins/elementor/assets/css/frontend-lite.min3ab2.css?ver=3.6.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-post-4-css' href='<?php echo $this->wp_content?>/uploads/sites/12/elementor/css/post-4c7ed.css?ver=1651960589' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-global-css' href='<?php echo $this->wp_content?>/uploads/sites/12/elementor/css/globalc7ed.css?ver=1651960589' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-post-84-css' href='<?php echo $this->wp_content?>/uploads/sites/12/elementor/css/post-84a575.css?ver=1651960790' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-css' href='.<?php echo $this->wp_content?>/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min1849.css?ver=4.7.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='slick-style-css' href='<?php echo $this->wp_content?>/themes/amy-movie/css/vendor/slick1014.css?ver=5.9.7' type='text/css' media='all' />
+    <link rel='stylesheet' id='slick-theme-css' href='<?php echo $this->wp_content?>/themes/amy-movie/css/vendor/slick-theme1014.css?ver=5.9.7' type='text/css' media='all' />
+    <link rel='stylesheet' id='fancybox-css' href='<?php echo $this->wp_content?>/themes/amy-movie/css/vendor/jquery.fancyboxf8ee.css?ver=3.5.7' type='text/css' media='all' />
+    <link rel='stylesheet' id='tooltipster-css' href='<?php echo $this->wp_content?>/themes/amy-movie/css/vendor/tooltipster.bundle8a54.css?ver=1.0.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='mCustomScrollbar-css' href='<?php echo $this->wp_content?>/themes/amy-movie/css/vendor/jquery.mCustomScrollbar8a54.css?ver=1.0.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='plyr-css' href='<?php echo $this->wp_content?>/themes/amy-movie/css/vendor/plyr8a54.css?ver=1.0.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='amy-movie-style-css' href='<?php echo $this->wp_content?>/themes/amy-movie/css/style8a54.css?ver=1.0.0' type='text/css' media='all' />
     <style id='amy-movie-style-inline-css' type='text/css'>
         .amy-primary-navigation ul.nav-menu>li>a::after {
             top: 70%;
@@ -355,19 +355,19 @@
     </style>
     <link rel='stylesheet' id='csf-google-web-fonts-css' href='http://fonts.googleapis.com/css?family=Roboto%20Condensed:400,700&amp;display=swap' type='text/css' media='all' />
     <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=5.9.7' type='text/css' media='all' />
-    <script type='text/javascript' src='./wp-includes/js/jquery/jquery.minaf6c.js?ver=3.6.0' id='jquery-core-js'></script>
-    <script type='text/javascript' src='./wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
-    <script type='text/javascript' src='./wp-content/themes/amy-movie/js/vendor/woocommerce8a54.js?ver=1.0.0' id='amy-movie-woocommerce-script-js'></script>
-    <link rel="https://api.w.org/" href="./wp-json/index.html" />
-    <link rel="alternate" type="application/json" href="./wp-json/wp/v2/pages/84.json" />
+    <script type='text/javascript' src='.<?php echo $this->wp_includes?>/js/jquery/jquery.minaf6c.js?ver=3.6.0' id='jquery-core-js'></script>
+    <script type='text/javascript' src='<?php echo $this->wp_includes?>/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+    <script type='text/javascript' src='<?php echo $this->wp_content?>/themes/amy-movie/js/vendor/woocommerce8a54.js?ver=1.0.0' id='amy-movie-woocommerce-script-js'></script>
+    <link rel="https://api.w.org/" href="<?php echo $this->wp_json?>/index.html" />
+    <link rel="alternate" type="application/json" href="<?php echo $this->wp_json?>/wp/v2/pages/84.json" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?php echo $this->wp_includes?>/wlwmanifest.xml" />
     <meta name="generator" content="WordPress 5.9.7" />
     <meta name="generator" content="WooCommerce 6.4.1" />
-    <link rel="canonical" href="index.html" />
-    <link rel='shortlink' href='index.html' />
-    <link rel="alternate" type="application/json+oembed" href="./wp-json/oembed/1.0/embedcaa9.json?url=http%3A%2F%2Fdemo.amytheme.com%2Fmovie%2Fdemo%2Felementor-book-tickets%2F" />
-    <link rel="alternate" type="text/xml+oembed" href="./wp-json/oembed/1.0/embed4daa?url=http%3A%2F%2Fdemo.amytheme.com%2Fmovie%2Fdemo%2Felementor-book-tickets%2F&amp;format=xml" />
+    <link rel="canonical" href="home" />
+    <link rel='shortlink' href='home' />
+    <link rel="alternate" type="application/json+oembed" href="<?php echo $this->wp_json?>/oembed/1.0/embedcaa9.json?url=http%3A%2F%2Fdemo.amytheme.com%2Fmovie%2Fdemo%2Felementor-book-tickets%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="<?php echo $this->wp_json?>/oembed/1.0/embed4daa?url=http%3A%2F%2Fdemo.amytheme.com%2Fmovie%2Fdemo%2Felementor-book-tickets%2F&amp;format=xml" />
     <noscript>
         <style>
             .woocommerce-product-gallery {
@@ -425,7 +425,7 @@
         }
 
         #amy-page-header {
-            background-image: url("./wp-content/uploads/sites/12/2022/05/img_48.jpg");
+            background-image: url("<?php echo $this->wp_content?>/uploads/sites/12/2022/05/img_48.jpg");
         }
     </style>
 </head>
@@ -446,8 +446,8 @@
                 <div class="amy-inner">
                     <div class="amy-left">
                         <div id="amy-site-logo">
-                            <a href="index.html">
-                                <img src="wp-content/uploads/sites/12/2022/05/img_66.png" alt="Elementor Book Tickets" />
+                            <a href="home">
+                                <img src="<?php echo $this->wp_content?>/uploads/sites/12/2022/05/img_66.png" alt="Elementor Book Tickets" />
                             </a>
                         </div>
                     </div>
@@ -456,7 +456,7 @@
                             <div class="menu-mainnav-container">
                                 <ul id="menu-mainnav" class="nav-menu">
                                     <li id="menu-item-434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-84 current_page_item menu-item-434">
-                                        <a href="index.html" aria-current="page">Home</a>
+                                        <a href="home" aria-current="page">Home</a>
                                     </li>
                                     <li id="menu-item-422" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-422">
                                         <a href="#">Movie</a>

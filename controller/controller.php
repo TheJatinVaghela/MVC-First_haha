@@ -1,6 +1,9 @@
 <?php
     class controller{
 
+        public $wp_includes = "http://localhost/php\project_one/view/wp-includes" ;
+        public $wp_content = "http://localhost/php\project_one/view/wp-content" ;
+        public $wp_json = "http://localhost/php/project_one/view/wp-json" ;
         public function __construct(){
             // echo "<pre>";
                 // print_r($_SERVER);
