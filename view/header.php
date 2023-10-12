@@ -432,6 +432,7 @@
     </style>
         
         <link rel="stylesheet" href="<?php echo $this->jatin_made?>/sign_inANDsign_up.css">
+        <link rel="stylesheet" href="<?php echo $this->jatin_made?>/_404_not_found.css">
 </head>
 
 <body class="home page-template page-template-elementor_header_footer page page-id-84 theme-amy-movie woocommerce-no-js amy-header-default  single-author elementor-default elementor-template-full-width elementor-kit-4 elementor-page elementor-page-84">

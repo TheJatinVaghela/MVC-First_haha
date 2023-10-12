@@ -12,7 +12,7 @@
                 // print_r($_SERVER);
                 if($_SERVER["PATH_INFO"])
                 {   
-                
+                    // echo $_SERVER["PATH_INFO"];
                     switch ($_SERVER['PATH_INFO']) 
                     {
                         
@@ -46,14 +46,14 @@
                             break;
 
                         default:
-                            echo "inside default";
-
+                            // echo "inside default";
+                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/home.php");
                         break;
                     }
                 }
                 else
                 {
-                     header('location:home');
+                    header('location:home');
                     echo "inside else";
                 }
              

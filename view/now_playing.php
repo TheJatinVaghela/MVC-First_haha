@@ -7,7 +7,7 @@
             <section id="amy-page-header" class="amy-page-header">
                 <div class="amy-page-title amy-center">
                     <div class="amy-inner container">
-                        <h1 class="page-title">
+                        <h1 class="page-title">hre
                             Now Playing </h1>
                     </div>
                 </div>
@@ -30,15 +30,15 @@
 
 
                                                                 <div class="list-content amy-ajax-content">
-
+<!--  -->
                                                                     <article class="entry-item clearfix">
                                                                         <div class="entry-thumb">
-                                                                            <a href="amy_movie/kubo-and-the-two-strings">
+                                                                            <a href="sign-up">
                                                                                 <img class="" src="<?php echo $this->wp_content ?>/uploads/sites/12/2022/05/img_20-1-205x347_c.jpg" alt="Kubo and the Two Strings" /> </a>
                                                                         </div>
                                                                         <div class="entry-content">
                                                                             <h2 class="entry-title">
-                                                                                <a href="amy_movie/kubo-and-the-two-strings">
+                                                                                <a href="sign-up">
                                                                                     Kubo and the Two Strings </a>
                                                                             </h2>
                                                                             <div class="info-top">
@@ -56,7 +56,7 @@
                                                                                         Actor:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_actor/alexander-cattly">Alexander Cattly</a>, <a href="amy_actor/cartin-hollia">Cartin Hollia</a>, <a href="amy_actor/greta-garbo">Greta Garbo</a> </span>
+                                                                                        <a href="sign-up">Alexander Cattly</a>, <a href="sign-up">Cartin Hollia</a>, <a href="sign-up">Greta Garbo</a> </span>
                                                                                 </li>
 
                                                                                 <li>
@@ -64,7 +64,7 @@
                                                                                         Director:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_director/grace-belly">Grace Belly</a>, <a href="amy_director/mae-west">Mae West</a> </span>
+                                                                                        <a href="sign-up">Grace Belly</a>, <a href="sign-up">Mae West</a> </span>
                                                                                 </li>
 
                                                                                 <li>
@@ -72,7 +72,7 @@
                                                                                         Genre:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_genre/cartoon">Cartoon</a>, <a href="amy_genre/comic">Comic</a> </span>
+                                                                                        <a href="sign-up">Cartoon</a>, <a href="sign-up">Comic</a> </span>
                                                                                 </li>
 
 
@@ -149,12 +149,12 @@
                                                                     </article>
                                                                     <article class="entry-item clearfix">
                                                                         <div class="entry-thumb">
-                                                                            <a href="amy_movie/the-hurricane-heist">
+                                                                            <a href="sign-up">
                                                                                 <img class="" src="<?php echo $this->wp_content ?>/uploads/sites/12/2022/05/img_19-1-205x347_c.jpg" alt="The Hurricane Heist" /> </a>
                                                                         </div>
                                                                         <div class="entry-content">
                                                                             <h2 class="entry-title">
-                                                                                <a href="amy_movie/the-hurricane-heist">
+                                                                                <a href="sign-up">
                                                                                     The Hurricane Heist </a>
                                                                             </h2>
                                                                             <div class="info-top">
@@ -172,7 +172,7 @@
                                                                                         Actor:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_actor/alexander-cattly">Alexander Cattly</a>, <a href="amy_actor/greta-garbo">Greta Garbo</a>, <a href="amy_actor/humpray-richard">Humpray Richard</a> </span>
+                                                                                        <a href="sign-up">Alexander Cattly</a>, <a href="sign-up">Greta Garbo</a>, <a href="amy_actor/humpray-richard">Humpray Richard</a> </span>
                                                                                 </li>
 
                                                                                 <li>
@@ -180,7 +180,7 @@
                                                                                         Director:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_director/gally-peckin">Gally Peckin</a>, <a href="amy_director/mae-west">Mae West</a> </span>
+                                                                                        <a href="sign-up">Gally Peckin</a>, <a href="asign-up">Mae West</a> </span>
                                                                                 </li>
 
                                                                                 <li>
@@ -188,7 +188,7 @@
                                                                                         Genre:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_genre/comic">Comic</a>, <a href="amy_genre/magic">Magic</a> </span>
+                                                                                        <a href="sign-up">Comic</a>, <a href="sign-up">Magic</a> </span>
                                                                                 </li>
 
 
@@ -260,12 +260,12 @@
                                                                     </article>
                                                                     <article class="entry-item clearfix">
                                                                         <div class="entry-thumb">
-                                                                            <a href="amy_movie/jumanji-welcome-to-the-jungle">
+                                                                            <a href="sign-up">
                                                                                 <img class="" src="<?php echo $this->wp_content ?>/uploads/sites/12/2022/05/img_18-1-205x347_c.jpg" alt="Jumanji: Welcome to the Jungle" /> </a>
                                                                         </div>
                                                                         <div class="entry-content">
                                                                             <h2 class="entry-title">
-                                                                                <a href="amy_movie/jumanji-welcome-to-the-jungle">
+                                                                                <a href="sign-up">
                                                                                     Jumanji: Welcome to the Jungle </a>
                                                                             </h2>
                                                                             <div class="info-top">
@@ -283,7 +283,7 @@
                                                                                         Actor:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_actor/alexander-cattly">Alexander Cattly</a>, <a href="amy_actor/cartin-hollia">Cartin Hollia</a>, <a href="amy_actor/humpray-richard">Humpray Richard</a> </span>
+                                                                                        <a href="sign-up">Alexander Cattly</a>, <a href="sign-up">Cartin Hollia</a>, <a href="amy_actor/humpray-richard">Humpray Richard</a> </span>
                                                                                 </li>
 
                                                                                 <li>
@@ -291,7 +291,7 @@
                                                                                         Director:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_director/gally-peckin">Gally Peckin</a>, <a href="amy_director/mae-west">Mae West</a> </span>
+                                                                                        <a href="sign-up">Gally Peckin</a>, <a href="sign-up">Mae West</a> </span>
                                                                                 </li>
 
                                                                                 <li>
@@ -299,7 +299,7 @@
                                                                                         Genre:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_genre/cartoon">Cartoon</a>, <a href="amy_genre/sci-fi">Sci-fi</a> </span>
+                                                                                        <a href="sign-up">Cartoon</a>, <a href="sign-up">Sci-fi</a> </span>
                                                                                 </li>
 
 
@@ -377,12 +377,12 @@
                                                                     </article>
                                                                     <article class="entry-item clearfix">
                                                                         <div class="entry-thumb">
-                                                                            <a href="amy_movie/death-wish">
+                                                                            <a href="sign-up">
                                                                                 <img class="" src="<?php echo $this->wp_content ?>/uploads/sites/12/2022/05/img_19-205x347_c.jpg" alt="Death Wish" /> </a>
                                                                         </div>
                                                                         <div class="entry-content">
                                                                             <h2 class="entry-title">
-                                                                                <a href="amy_movie/death-wish">
+                                                                                <a href="sign-up">
                                                                                     Death Wish </a>
                                                                             </h2>
                                                                             <div class="info-top">
@@ -400,7 +400,7 @@
                                                                                         Actor:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_actor/cartin-hollia">Cartin Hollia</a>, <a href="amy_actor/greta-garbo">Greta Garbo</a>, <a href="amy_actor/martin-brando">Martin Brando</a> </span>
+                                                                                        <a href="sign-up">Cartin Hollia</a>, <a href="sign-up">Greta Garbo</a>, <a href="amy_actor/martin-brando">Martin Brando</a> </span>
                                                                                 </li>
 
                                                                                 <li>
@@ -408,7 +408,7 @@
                                                                                         Director:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_director/kingia-rogers">Kingia Rogers</a>, <a href="amy_director/mae-west">Mae West</a> </span>
+                                                                                        <a href="sign-up">Kingia Rogers</a>, <a href="sign-up">Mae West</a> </span>
                                                                                 </li>
 
                                                                                 <li>
@@ -416,7 +416,7 @@
                                                                                         Genre:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_genre/cartoon">Cartoon</a>, <a href="amy_genre/comic">Comic</a> </span>
+                                                                                        <a href="sign-up">Cartoon</a>, <a href="sign-up">Comic</a> </span>
                                                                                 </li>
 
 
@@ -496,12 +496,12 @@
                                                                     </article>
                                                                     <article class="entry-item clearfix">
                                                                         <div class="entry-thumb">
-                                                                            <a href="amy_movie/supersonic">
+                                                                            <a href="sign-up">
                                                                                 <img class="" src="<?php echo $this->wp_content ?>/uploads/sites/12/2022/05/img_18-205x347_c.jpg" alt="Supersonic" /> </a>
                                                                         </div>
                                                                         <div class="entry-content">
                                                                             <h2 class="entry-title">
-                                                                                <a href="amy_movie/supersonic">
+                                                                                <a href="sign-up">
                                                                                     Supersonic </a>
                                                                             </h2>
                                                                             <div class="info-top">
@@ -519,7 +519,7 @@
                                                                                         Actor:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_actor/alexander-cattly">Alexander Cattly</a>, <a href="amy_actor/cartin-hollia">Cartin Hollia</a>, <a href="amy_actor/greta-garbo">Greta Garbo</a>, <a href="amy_actor/humpray-richard">Humpray Richard</a> </span>
+                                                                                        <a href="sign-up">Alexander Cattly</a>, <a href="sign-up">Cartin Hollia</a>, <a href="amy_actor/greta-garbo">Greta Garbo</a>, <a href="amy_actor/humpray-richard">Humpray Richard</a> </span>
                                                                                 </li>
 
                                                                                 <li>
@@ -527,7 +527,7 @@
                                                                                         Director:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_director/gally-peckin">Gally Peckin</a>, <a href="amy_director/kingia-rogers">Kingia Rogers</a> </span>
+                                                                                        <a href="sign-up">Gally Peckin</a>, <a href="sign-up">Kingia Rogers</a> </span>
                                                                                 </li>
 
                                                                                 <li>
@@ -535,7 +535,7 @@
                                                                                         Genre:
                                                                                     </label>
                                                                                     <span>
-                                                                                        <a href="amy_genre/cartoon">Cartoon</a>, <a href="amy_genre/magic">Magic</a> </span>
+                                                                                        <a href="sign-up">Cartoon</a>, <a href="sign-up">Magic</a> </span>
                                                                                 </li>
 
 
@@ -637,7 +637,7 @@
                                                                     <div class="entry-item">
                                                                         <div class="entry-thumb"><img class="" src="<?php echo $this->wp_content ?>/uploads/sites/12/2022/05/img_20-1-118x159_c.jpg" alt="Kubo and the Two Strings" /></div>
                                                                         <div class="entry-content">
-                                                                            <h2 class="entry-title"><a href="amy_movie/kubo-and-the-two-strings">Kubo and the Two Strings</a></h2>
+                                                                            <h2 class="entry-title"><a href="home">Kubo and the Two Strings</a></h2>
                                                                             <div><span class="duration"><i class="fa fa-clock-o"></i>02 hours 00 minutes</span></div>
                                                                             <div class="genre"><span><a href="amy_genre/cartoon">Cartoon</a>, <a href="amy_genre/comic">Comic</a></span></div>
                                                                         </div>
