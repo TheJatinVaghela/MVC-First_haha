@@ -5,6 +5,7 @@
         public $wp_content = "http://localhost/php\project_one/view/wp-content" ;
         public $wp_json = "http://localhost/php/project_one/view/wp-json" ;
         public $amy_movie = "http://localhost/php/project_one/view/amy_movie" ;
+        public $jatin_made = "http://localhost/php/project_one/view/jatin-made" ;
 
         public function __construct(){
             // echo "<pre>";
@@ -40,12 +41,8 @@
                             $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/book_ticket.php");
                             break;
 
-                        case "/sign-in":
-                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/sign_in.php");
-                            break;
-
-                        case "/sign-up":
-                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/sign_up.php");
+                        case "/sign-in" || "/sign-up":
+                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/sign_inANDsign_up.php");
                             break;
 
                         default:

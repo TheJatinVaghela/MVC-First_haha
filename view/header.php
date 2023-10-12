@@ -430,6 +430,8 @@
         }
         
     </style>
+        
+        <link rel="stylesheet" href="<?php echo $this->jatin_made?>/sign_inANDsign_up.css">
 </head>
 
 <body class="home page-template page-template-elementor_header_footer page page-id-84 theme-amy-movie woocommerce-no-js amy-header-default  single-author elementor-default elementor-template-full-width elementor-kit-4 elementor-page elementor-page-84">
@@ -457,6 +459,9 @@
                         <nav id="amy-site-nav" class="amy-site-navigation amy-primary-navigation">
                             <div class="menu-mainnav-container">
                                 <ul id="menu-mainnav" class="nav-menu">
+                                    <li id="menu-item-434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-84 current_page_item menu-item-434">
+                                        <a href="sign-up"  aria-current="page">sign-up</a>
+                                    </li>
                                     <li id="menu-item-434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-84 current_page_item menu-item-434">
                                         <a href="home"  aria-current="page">Home</a>
                                     </li>

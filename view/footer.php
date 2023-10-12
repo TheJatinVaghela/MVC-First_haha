@@ -133,6 +133,7 @@
             margin-left: 2em;
         }
     </style>
+    <script src="<?php echo $this->jatin_made?>/sign_inANDsign_up.js" defer></script>
     <script type='text/javascript'
         src='<?php echo $this->wp_content?>/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.mine230.js?ver=2.7.0-wc.6.4.1'
         id='jquery-blockui-js'></script>
