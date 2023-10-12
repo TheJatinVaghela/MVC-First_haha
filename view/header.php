@@ -428,6 +428,7 @@
         #amy-page-header {
             background-image: url("<?php echo $this->wp_content?>/uploads/sites/12/2022/05/img_48.jpg");
         }
+        
     </style>
 </head>
 
@@ -457,9 +458,9 @@
                             <div class="menu-mainnav-container">
                                 <ul id="menu-mainnav" class="nav-menu">
                                     <li id="menu-item-434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-84 current_page_item menu-item-434">
-                                        <a href="home" aria-current="page">Home</a>
+                                        <a href="home"  aria-current="page">Home</a>
                                     </li>
-                                    <li id="menu-item-422" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-422">
+                                    <li id="menu-item-422" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-422 ">
                                         <a href="#">Movie</a>
                                         <ul class="sub-menu">
                                             <li id="menu-item-655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-655">

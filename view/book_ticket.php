@@ -417,7 +417,7 @@
         }
 
         #amy-page-header {
-            background-image: url(<?php echo $this->wp_content?>/uploads/sites/12/2022/05/img_48.jpg);
+            background-image: url( ./wp-content/uploads/sites/12/2022/05/img_48.jpg);
         }
     </style>
 </head>

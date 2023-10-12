@@ -40,6 +40,14 @@
                             $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/book_ticket.php");
                             break;
 
+                        case "/sign-in":
+                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/sign_in.php");
+                            break;
+
+                        case "/sign-up":
+                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/sign_up.php");
+                            break;
+
                         default:
                             echo "inside default";
 

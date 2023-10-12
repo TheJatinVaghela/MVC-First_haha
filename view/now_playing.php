@@ -1,4 +1,4 @@
-<body>../../wp-includes
+<body>
 
     <div id="main">
         <div id="content" class="site-content">
