@@ -189,10 +189,12 @@
 	text-align: center;
 }
 
-#User-id,
-#Email-id,
-#Password-id,
-#mobile-id{
+input#User-id,
+input#Email-id,
+input#Password-id,
+input#mobile-id,
+input#sign-in-email,
+input#sign-in-password{
 	background-color: #339aff;
 	border: none;
 	padding: 0.9rem 0.9rem;
