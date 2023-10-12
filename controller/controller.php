@@ -4,6 +4,8 @@
         public $wp_includes = "http://localhost/php\project_one/view/wp-includes" ;
         public $wp_content = "http://localhost/php\project_one/view/wp-content" ;
         public $wp_json = "http://localhost/php/project_one/view/wp-json" ;
+        public $amy_movie = "http://localhost/php/project_one/view/amy_movie" ;
+
         public function __construct(){
             // echo "<pre>";
                 // print_r($_SERVER);
@@ -13,19 +15,31 @@
                     switch ($_SERVER['PATH_INFO']) 
                     {
                         
-                         case '/home':
+                        case '/home':
                         
-                              require_once('F:/Xampp/xammp/htdocs/php/project_one/view/header.php');
-                             require_once("F:/Xampp/xammp/htdocs/php/project_one/view/home.php");
-                              require_once("F:/Xampp/xammp/htdocs/php/project_one/view/footer.php");
-                             break;
+                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/home.php");
+                            break;
 
-                        // case '/project':
-                        //     require_once('view/header.php');
-                        //     require_once('view/project.php');
-                        //     require_once('view/footer.php');
-                        //     break;
+                        case '/now-playing':
+                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/now_playing.php");
+                            break;
                         
+                        case "/coming-soon":
+                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/comming_soon.php");
+                            break;
+
+                        case "/single-movie":
+                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/single_moive.php");
+                            break;
+
+                        case "/Daily-Showtime-Layout-List":
+                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/daily_showtime_single_list.php");
+                            break;
+
+                        case "/book-ticket":
+                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/book_ticket.php");
+                            break;
+
                         default:
                             echo "inside default";
 
@@ -37,9 +51,12 @@
                      header('location:home');
                     echo "inside else";
                 }
-                // require_once('/Xampp/xammp/htdocs/php/project_one/_view/header.php');
-                // require_once("/Xampp/xammp/htdocs/php/project_one/_view/home.php");
-                // require_once("/Xampp/xammp/htdocs/php/project_one/_view/footer.php");
+             
+        }
+        private function header_footer_inbeetwine($file){
+            require_once('F:/Xampp/xammp/htdocs/php/project_one/view/header.php');
+            require_once($file);
+            require_once("F:/Xampp/xammp/htdocs/php/project_one/view/footer.php");
         }
     }
 

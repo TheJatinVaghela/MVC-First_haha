@@ -3,6 +3,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
+<script src="jquery-3.7.1.min.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
@@ -462,35 +463,26 @@
                                         <a href="#">Movie</a>
                                         <ul class="sub-menu">
                                             <li id="menu-item-655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-655">
-                                                <a href="now-playing/index.html">Now Playing</a>
+                                                <a href="now-playing">Now Playing</a>
                                             </li>
                                             <li id="menu-item-654" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-654">
-                                                <a href="coming-soon/index.html">Coming Soon</a>
+                                                <a href="coming-soon">Coming Soon</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li id="menu-item-660" class="menu-item menu-item-type-post_type menu-item-object-amy_movie menu-item-660">
-                                        <a href="amy_movie/kubo-and-the-two-strings/index.html">Single Movie</a>
+                                        <a href="single-movie">Single Movie</a>
                                     </li>
                                     <li id="menu-item-428" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-428">
                                         <a href="#">Showtime</a>
                                         <ul class="sub-menu">
                                             <li id="menu-item-657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-657">
-                                                <a href="v2-showtime-layout-1/index.html">Daily Showtime Layout List</a>
-                                            </li>
-                                            <li id="menu-item-656" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-656">
-                                                <a href="v2-showtime-layout-4/index.html">Daily Showtime Ajax</a>
-                                            </li>
-                                            <li id="menu-item-659" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-659">
-                                                <a href="v2-showtime-layout-2/index.html">Weekly Showtime Table</a>
-                                            </li>
-                                            <li id="menu-item-658" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-658">
-                                                <a href="v2-showtime-layout-3/index.html">Weekly Showtime Ajax</a>
+                                                <a href="Daily-Showtime-Layout-List">Daily Showtime Layout List</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li id="menu-item-661" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-661">
-                                        <a href="product/gv-vivocity/index.html">Book Ticket</a>
+                                        <a href="book-ticket">Book Ticket</a>
                                     </li>
                                 </ul>
                             </div>
