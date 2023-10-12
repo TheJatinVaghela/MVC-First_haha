@@ -46,6 +46,9 @@
                             break;
 
                         case "/sign-in" || "/sign-up":
+                            echo "<pre>";
+                            print_r($_REQUEST);
+                            echo "</pre>";
                             $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/sign_inANDsign_up.php");
                             break;
 
