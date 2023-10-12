@@ -22,7 +22,7 @@ class model{
     protected function register($data , $table){
        
         $this->print_stuf($data);
-        $data_keys = implode(',',array_keys(array_slice($data , '0', '-1')));
+        $data_keys = implode(",",array_keys(array_slice($data , '0', '-1')));
         $data_values = implode("' , '",array_values(array_slice($data,'0','-1')));
 
         $quiry = "insert into $table ($data_keys) ('$data_values')";
@@ -31,6 +31,6 @@ class model{
         // $this->print_stuf($table);
         // $this->print_stuf($data_keys);
         // $this->print_stuf($data_values);
-        // $this->print_stuf($quiry);
+        $this->print_stuf($quiry);
     }
 } ?>
