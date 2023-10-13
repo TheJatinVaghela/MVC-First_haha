@@ -9,7 +9,6 @@
                     <input id="User-id"type="text" placeholder="User Name" class="input Sign-UP-INPUT" name="user_name" required/>
                     <input id="Email-id"type="email" placeholder="User Mail" class="input Sign-UP-INPUT" name="user_mail" required/>
                     <input id="mobile-id" type="text" placeholder="User mobile" pattern="[6789][0-9]{9}" class="input Sign-UP-INPUT" name="user_mobile" required/>
-                    <input id="Profile-id"type="text" placeholder="Profile Name" class="input Sign-UP-INPUT" name="user_profile_name" required/>
                     <input id="Password-id"type="password" placeholder="Password" class="input Sign-UP-INPUT" name="user_password" required/>
                     <button class="btn" name="Sign_Up">Sign Up</button>
                 </form>

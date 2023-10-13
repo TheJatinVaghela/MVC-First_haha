@@ -25,8 +25,8 @@ class model{
         $data_keys = implode(",",array_keys(array_slice($data , '0', '-1')));
         $data_values = implode("' , '",array_values(array_slice($data,'0','-1')));
 
-        $quiry = "insert into $table ($data_keys) ('$data_values')";
-        $this->connection->query($quiry);
+        $quiry = "insert into $table ($data_keys) values('$data_values')";
+         $this->connection->query($quiry);
 
         // $this->print_stuf($table);
         // $this->print_stuf($data_keys);
