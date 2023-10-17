@@ -9,6 +9,7 @@
         public $wp_json = "http://localhost/php/project_one/view/wp-json" ;
         public $amy_movie = "http://localhost/php/project_one/view/amy_movie" ;
         public $jatin_made = "http://localhost/php/project_one/view/jatin-made" ;
+        public $admin = "http://localhost/php/project_one/view/admin";
         public $sessionGotData ;
         public function __construct(){
             parent::__construct();
@@ -50,7 +51,11 @@
                             break;
 
                         case "/admin":
-                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/admin.php");
+                            if(isset($_SESSION["GotData"])){
+                                require_once("F:/Xampp/xammp/htdocs/php/project_one/view/admin/admin.php");
+                            }else{
+                                header("Location:sign-in");
+                            }
                             break;
 
                         case "/sign-in" || "/sign-up":
