@@ -9,11 +9,12 @@
         public $wp_json = "http://localhost/php/project_one/view/wp-json" ;
         public $amy_movie = "http://localhost/php/project_one/view/amy_movie" ;
         public $jatin_made = "http://localhost/php/project_one/view/jatin-made" ;
-
+    
         public function __construct(){
             parent::__construct();
             // echo "<pre>";
                 // print_r($_SERVER);
+              
                 if($_SERVER["PATH_INFO"])
                 {   
                     // echo $_SERVER["PATH_INFO"];
@@ -21,7 +22,8 @@
                     {
                         
                         case '/home':
-                        
+                            $this->print_stuf($gotData = $_SESSION['GotData']);
+                            // $data = $this->SendDataToController();
                             $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/home.php");
                             break;
 
@@ -46,8 +48,25 @@
                             break;
 
                         case "/sign-in" || "/sign-up":
-                            if(isset($_REQUEST["Sign_Up"])){ $this->register($_REQUEST,"users"); }
-                            else if(isset($_REQUEST["Sign_In"])){ echo "Chacking ..." ;}
+                            if(isset($_REQUEST["Sign_Up"])){ $this->register($_REQUEST,"users",false); }
+                            else if(isset($_REQUEST["Sign_In"])){
+                                $GotData = $this->register($_REQUEST,"users",true);
+                                $this->print_stuf($GotData);
+                                if($GotData->role_as == 1)
+                                {
+                                    header("location:admin");
+                                }
+                                else if ($GotData->role_as == 0)
+                                {
+                                    $_SESSION['GotData'] = $GotData;
+                                    $this->print_stuf($gotData = $_SESSION['GotData']);
+                                     header("Location:home");
+                                }
+                                else
+                                {
+                                    $this->print_stuf("invalid response");
+                                }
+                            }
                             
                             $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/sign_inANDsign_up.php");
                             break;
@@ -70,6 +89,8 @@
             require_once($file);
             require_once("F:/Xampp/xammp/htdocs/php/project_one/view/footer.php");
         }
+
+        
     }
 
     $controller = new controller;
