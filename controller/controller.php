@@ -9,7 +9,7 @@
         public $wp_json = "http://localhost/php/project_one/view/wp-json" ;
         public $amy_movie = "http://localhost/php/project_one/view/amy_movie" ;
         public $jatin_made = "http://localhost/php/project_one/view/jatin-made" ;
-    
+        public $sessionGotData ;
         public function __construct(){
             parent::__construct();
             // echo "<pre>";
@@ -22,7 +22,9 @@
                     {
                         
                         case '/home':
-                            $this->print_stuf($gotData = $_SESSION['GotData']);
+                            if(isset($_SESSION["GotData"])){
+                                $this->sessionGotData = $_SESSION["GotData"];
+                            };
                             // $data = $this->SendDataToController();
                             $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/home.php");
                             break;
@@ -47,16 +49,21 @@
                             $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/book_ticket.php");
                             break;
 
+                        case "/admin":
+                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/admin.php");
+                            break;
+
                         case "/sign-in" || "/sign-up":
                             if(isset($_REQUEST["Sign_Up"])){ $this->register($_REQUEST,"users",false); }
                             else if(isset($_REQUEST["Sign_In"])){
                                 $GotData = $this->register($_REQUEST,"users",true);
                                 $this->print_stuf($GotData);
-                                if($GotData->role_as == 1)
+                                if($GotData->guest_admin == 1)
                                 {
-                                    header("location:admin");
+                                    $_SESSION['GotData'] = $GotData;
+                                    header("Location:admin");
                                 }
-                                else if ($GotData->role_as == 0)
+                                else if ($GotData->guest_admin == 0)
                                 {
                                     $_SESSION['GotData'] = $GotData;
                                     $this->print_stuf($gotData = $_SESSION['GotData']);
@@ -90,6 +97,11 @@
             require_once("F:/Xampp/xammp/htdocs/php/project_one/view/footer.php");
         }
 
+        public function print_stuf_controller($data){
+            echo "<pre>";
+            print_r($data);
+            echo "</pre>";
+        }
         
     }
 
