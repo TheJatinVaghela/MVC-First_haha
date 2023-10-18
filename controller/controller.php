@@ -52,6 +52,7 @@
 
                         case "/admin":
                             if(isset($_SESSION["GotData"])){
+                                // $this->print_stuf_controller($_SESSION["GotData"]);
                                 require_once("F:/Xampp/xammp/htdocs/php/project_one/view/admin/admin.php");
                             }else{
                                 header("Location:sign-in");
