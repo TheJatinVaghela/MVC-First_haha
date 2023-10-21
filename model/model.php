@@ -20,6 +20,26 @@ class model{
         echo"</pre>";
     }
 
+    function Get_Users_Data($table){
+        $sql = "SELECT * FROM $table";
+        $sqlex = $this->connection->query($sql);
+        if ($sqlex->num_rows > 0) {
+            $fatchdata =[];
+            $I=0;
+            while($I < $sqlex->num_rows){
+
+                array_push($fatchdata,$sqlex->fetch_object());
+                $I ++;
+            }
+            return $fatchdata;
+            // $this->print_stuf( $fatchdata);
+            // exit();
+        } else {
+            return "404 Not Found";
+        }
+        
+    }
+
     protected function register($data , $table , $sign_inData){
         if($sign_inData){
         //   $this->print_stuf($data);

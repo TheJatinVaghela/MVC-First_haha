@@ -9,7 +9,7 @@
         public $wp_json = "http://localhost/php/project_one/view/wp-json" ;
         public $amy_movie = "http://localhost/php/project_one/view/amy_movie" ;
         public $jatin_made = "http://localhost/php/project_one/view/jatin-made" ;
-        public $admin = "http://localhost/php/project_one/view/admin";
+        public $admin = "http://localhost/php/project_one/Tempate/darkpan-1.0.0/";
         public $sessionGotData ;
         public function __construct(){
             parent::__construct();
@@ -53,7 +53,10 @@
                         case "/admin":
                             if(isset($_SESSION["GotData"])){
                                 // $this->print_stuf_controller($_SESSION["GotData"]);
+                                $fetchdata = $this->Get_Users_Data('users');
+                                require_once("F:/Xampp/xammp/htdocs/php/project_one/view/admin/amin_header.php");
                                 require_once("F:/Xampp/xammp/htdocs/php/project_one/view/admin/admin.php");
+                                require_once("F:/Xampp/xammp/htdocs/php/project_one/view/admin/admin_footer.php");
                             }else{
                                 header("Location:sign-in");
                             }
