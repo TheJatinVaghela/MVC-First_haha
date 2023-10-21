@@ -7,7 +7,7 @@ class model{
     {
         try {
             $this->connection = new mysqli("localhost","root","","movie_theater");
-            echo "connection established";
+            // echo "connection established";
             
         } catch (\Throwable $th) {
             echo "connection error";
