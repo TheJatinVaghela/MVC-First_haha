@@ -50,17 +50,8 @@
                             $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/book_ticket.php");
                             break;
 
-                        case "/admin":
-                            if(isset($_SESSION["GotData"])){
-                                // $this->print_stuf_controller($_SESSION["GotData"]);
-                                $fetchdata = $this->Get_Users_Data('users');
-                                
-                                require_once("F:/Xampp/xammp/htdocs/php/project_one/view/admin/amin_header.php");
-                                require_once("F:/Xampp/xammp/htdocs/php/project_one/view/admin/admin.php");
-                                require_once("F:/Xampp/xammp/htdocs/php/project_one/view/admin/admin_footer.php");
-                            }else{
-                                header("Location:sign-in");
-                            }
+                        case ("/admin" || "/admin/users"):
+                            require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/admin_controller.php");
                             break;
 
                         case "/sign-in" || "/sign-up":

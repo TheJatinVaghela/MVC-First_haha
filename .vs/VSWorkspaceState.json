@@ -1,9 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\controller",
+    "\\model",
+    "\\public",
+    "\\Tempate",
+    "\\Tempate\\darkpan-1.0.0",
     "\\view",
-    "\\view\\admin"
+    "\\view\\admin",
+    "\\view\\jatin-made"
   ],
-  "SelectedNode": "\\view\\home.php",
+  "SelectedNode": "\\view\\admin\\admin.php",
   "PreviewInSolutionExplorer": false
 }
