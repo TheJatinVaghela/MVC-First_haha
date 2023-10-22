@@ -468,11 +468,11 @@
                                 <ul id="menu-mainnav" class="nav-menu">
                                     <?php 
                                     if(isset($_SESSION["GotData"])){
-                                        ?><li id='menu-item-434' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-84 current_page_item menu-item-434'>
+                                        ?><li id='menu-item-434' class='menu-item <?php if(($_SERVER["PATH_INFO"] == "/sign-up") || ($_SERVER["PATH_INFO"] == "/sign-in")){echo "current-menu-item";}?> menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-84 current_page_item menu-item-434'>
                                                 <a href='sign-up'  aria-current='page'>sign-out</a>
                                               </li><?php
                                     }else{
-                                       ?><li id='menu-item-434' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-84 current_page_item menu-item-434'>
+                                       ?><li id='menu-item-434' class='menu-item <?php if(($_SERVER["PATH_INFO"] == "/sign-up") || ($_SERVER["PATH_INFO"] == "/sign-in")){echo "current-menu-item";}?> menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-84 current_page_item menu-item-434'>
                                                 <a href='sign-up'  aria-current='page'>sign-up / sign-in</a>
                                               </li><?php
                                     }
@@ -481,7 +481,7 @@
                                      <?php if($_SERVER["PATH_INFO"] == "/home"){echo "current-menu-item";}?> page_item page-item-84 current_page_item menu-item-434">
                                         <a href="home"  aria-current="page">Home</a>
                                     </li>
-                                    <li id="menu-item-422" class="menu-item <?php if($_SERVER["PATH_INFO"] == "/now-playing"){echo "current-menu-item";}?> menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-422 ">
+                                    <li id="menu-item-422" class="menu-item <?php if(($_SERVER["PATH_INFO"] == "/now-playing")||($_SERVER["PATH_INFO"] == "/coming-soon")){echo "current-menu-item";}?> menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-422 ">
                                         <a href="now-playing">Movie</a>
                                         <ul class="sub-menu">
                                             <li id="menu-item-655" class="menu-item <?php if($_SERVER["PATH_INFO"] == "/now-playing"){echo "current-menu-item";}?> menu-item-type-post_type menu-item-object-page menu-item-655">
