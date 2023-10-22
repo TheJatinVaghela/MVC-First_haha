@@ -44,7 +44,7 @@
                                     </style>
                                     <div class="amy-widget-content">
                                         <div class="amy-text-block">
-                                            <h1 class="title">SAY <?php if(isset($_SESSION["GotData"])){print_r($this->sessionGotData->user_name);};?></h1>
+                                            <h1 class="title">SAY <?php  if(isset($_SESSION["GotData"])){print_r($this->sessionGotData->user_name);};?></h1>
                                             <h2 class="title">What&#8217;s on Your Mind <span class="hight-light">Today</span></h2>
                                             <p class="subtitle">at Moviezone Cinema &amp; Theatres!</p>
                                             <p class="text">All reserved seating &#8211; Choose your exact seat!

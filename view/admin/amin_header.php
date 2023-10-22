@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="<?php echo $this->admin;?><?php echo $this->admin;?>img/favicon.ico" rel="icon">
+    <link href="<?php echo $this->admin;?>img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,7 +76,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="admin/users" class="dropdown-item">users table</a>
-                            <a href="signup" class="dropdown-item">Sign Up</a>
+                            <a href="sign-up" class="dropdown-item">Sign Up</a>
                             <a href="admin/404" class="dropdown-item">404 Error</a>
                             <a href="admin/blank" class="dropdown-item">Blank Page</a>
                         </div>
@@ -172,7 +172,7 @@
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="admin/MyProfile" class="dropdown-item">My Profile</a>
                             <a href="admin/Settings" class="dropdown-item">Settings</a>
-                            <a href="admin/LogOut" class="dropdown-item">Log Out</a>
+                            <a href="sign-up" class="dropdown-item">Log Out</a>
                         </div>
                     </div>
                 </div>

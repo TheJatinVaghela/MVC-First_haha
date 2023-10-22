@@ -438,7 +438,7 @@
 </head>
 
 <?php
-    if(isset($_SESSION["GotData"])){$this->print_stuf_controller($_SESSION["GotData"]);};
+   // if(isset($_SESSION["GotData"])){$this->print_stuf_controller($_SESSION["GotData"]);};
 ?>
 
 <body class="home page-template page-template-elementor_header_footer page page-id-84 theme-amy-movie woocommerce-no-js amy-header-default  single-author elementor-default elementor-template-full-width elementor-kit-4 elementor-page elementor-page-84">
@@ -468,41 +468,42 @@
                                 <ul id="menu-mainnav" class="nav-menu">
                                     <?php 
                                     if(isset($_SESSION["GotData"])){
-                                    print_r("<li id='menu-item-434' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-84 current_page_item menu-item-434'>
+                                        ?><li id='menu-item-434' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-84 current_page_item menu-item-434'>
                                                 <a href='sign-up'  aria-current='page'>sign-out</a>
-                                              </li>");
+                                              </li><?php
                                     }else{
-                                        print_r("<li id='menu-item-434' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-84 current_page_item menu-item-434'>
+                                       ?><li id='menu-item-434' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-84 current_page_item menu-item-434'>
                                                 <a href='sign-up'  aria-current='page'>sign-up / sign-in</a>
-                                              </li>");
+                                              </li><?php
                                     }
                                     ?>
-                                    <li id="menu-item-434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-84 current_page_item menu-item-434">
+                                    <li id="menu-item-434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home
+                                     <?php if($_SERVER["PATH_INFO"] == "/home"){echo "current-menu-item";}?> page_item page-item-84 current_page_item menu-item-434">
                                         <a href="home"  aria-current="page">Home</a>
                                     </li>
-                                    <li id="menu-item-422" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-422 ">
-                                        <a href="#">Movie</a>
+                                    <li id="menu-item-422" class="menu-item <?php if($_SERVER["PATH_INFO"] == "/now-playing"){echo "current-menu-item";}?> menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-422 ">
+                                        <a href="now-playing">Movie</a>
                                         <ul class="sub-menu">
-                                            <li id="menu-item-655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-655">
+                                            <li id="menu-item-655" class="menu-item <?php if($_SERVER["PATH_INFO"] == "/now-playing"){echo "current-menu-item";}?> menu-item-type-post_type menu-item-object-page menu-item-655">
                                                 <a href="now-playing">Now Playing</a>
                                             </li>
-                                            <li id="menu-item-654" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-654">
+                                            <li id="menu-item-654" class="menu-item <?php if($_SERVER["PATH_INFO"] == "/coming-soon"){echo "current-menu-item";}?> menu-item-type-post_type menu-item-object-page menu-item-654">
                                                 <a href="coming-soon">Coming Soon</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li id="menu-item-660" class="menu-item menu-item-type-post_type menu-item-object-amy_movie menu-item-660">
+                                    <li id="menu-item-660" class="menu-item <?php if($_SERVER["PATH_INFO"] == "/single-movie"){echo "current-menu-item";}?> menu-item-type-post_type menu-item-object-amy_movie menu-item-660">
                                         <a href="single-movie">Single Movie</a>
                                     </li>
-                                    <li id="menu-item-428" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-428">
-                                        <a href="#">Showtime</a>
+                                    <li id="menu-item-428" class="menu-item <?php if($_SERVER["PATH_INFO"] == "/Daily-Showtime-Layout-List"){echo "current-menu-item";}?> menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-428">
+                                        <a href="Daily-Showtime-Layout-List">Showtime</a>
                                         <ul class="sub-menu">
-                                            <li id="menu-item-657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-657">
+                                            <li id="menu-item-657" class="menu-item <?php if($_SERVER["PATH_INFO"] == "/Daily-Showtime-Layout-List"){echo "current-menu-item";}?> menu-item-type-post_type menu-item-object-page menu-item-657">
                                                 <a href="Daily-Showtime-Layout-List">Daily Showtime Layout List</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li id="menu-item-661" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-661">
+                                    <li id="menu-item-661" class="menu-item <?php if($_SERVER["PATH_INFO"] == "/book-ticket"){echo "current-menu-item";}?> menu-item-type-post_type menu-item-object-product menu-item-661">
                                         <a href="book-ticket">Book Ticket</a>
                                     </li>
                                 </ul>
