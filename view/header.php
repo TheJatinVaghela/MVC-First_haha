@@ -469,7 +469,7 @@
                                     <?php 
                                     if(isset($_SESSION["GotData"])){
                                         ?><li id='menu-item-434' class='menu-item <?php if(($_SERVER["PATH_INFO"] == "/sign-up") || ($_SERVER["PATH_INFO"] == "/sign-in")){echo "current-menu-item";}?> menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-84 current_page_item menu-item-434'>
-                                                <a href='sign-up'  aria-current='page'>sign-out</a>
+                                                <a href='sign-up'  aria-current='page' >sign-out</a>
                                               </li><?php
                                     }else{
                                        ?><li id='menu-item-434' class='menu-item <?php if(($_SERVER["PATH_INFO"] == "/sign-up") || ($_SERVER["PATH_INFO"] == "/sign-in")){echo "current-menu-item";}?> menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-84 current_page_item menu-item-434'>

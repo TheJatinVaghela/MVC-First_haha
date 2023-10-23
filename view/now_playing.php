@@ -7,7 +7,7 @@
             <section id="amy-page-header" class="amy-page-header">
                 <div class="amy-page-title amy-center">
                     <div class="amy-inner container">
-                        <h1 class="page-title">hre
+                        <h1 class="page-title">
                             Now Playing </h1>
                     </div>
                 </div>

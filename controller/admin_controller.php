@@ -6,6 +6,7 @@ class admin_controller extends model
 {
 
     public $fetchdata ; 
+    public $admin_url = "http://localhost/php/project_one/public/admin";
     /**
      * Convert images in a directory to WebP format and save them to another directory.
  *
@@ -79,7 +80,14 @@ private function get_imgs(){
 public function admin_sites() {
     if(isset($_SESSION["GotData"])){
         // $this->print_stuf_controller($_SESSION["GotData"]);
-
+        if($_SESSION["GotData"]->guest_admin != 1){
+            $user = new signIn_Up();
+            $user->signIn_Up_Files();
+            if($_SERVER['PATH_INFO'] == '/sign-up' || $_SERVER['PATH_INFO'] == '/admin'){
+                $_SESSION["GotData"] = null;
+            }
+            return;
+        };
          $this->fetchdata = $this->Get_Users_Data('users');
 
         // echo $_SERVER['PATH_INFO'];
@@ -90,18 +98,22 @@ public function admin_sites() {
                 break;
                 
             
-            case '/admin/users' || '/users':
+            case '/admin/users':
                 $_SERVER['PATH_INFO'] ="/admin/users"; 
                 $this->admin_inbitwin("F:/Xampp/xammp/htdocs/php/project_one/view/admin/admin_users.php");
                 break;    
                 
-            case '/admin/edit_site' || '/edit_site':
+            case '/admin/edit_site':
                 $_SERVER['PATH_INFO'] ="/admin/edit_site"; 
                $this->get_imgs();
                 $this->admin_inbitwin("F:/Xampp/xammp/htdocs/php/project_one/view/admin/edit_site.php");
                 break;
 
             default:
+            if($_SERVER['PATH_INFO'] == '/sign-up'){
+              $_SESSION["GotData"] = null;
+            }
+            //   $_SESSION["GotData"] = null;
               $user = new signIn_Up();
               $user->signIn_Up_Files();
             // header("Location:http://localhost/php/project_one/public/sign-up");
@@ -111,9 +123,10 @@ public function admin_sites() {
         }
        
     }else{ 
-        
-          $user = new signIn_Up();
+      
+             $user = new signIn_Up();
              $user->signIn_Up_Files();
+            
         //  header("Location:http://localhost/php/project_one/public/sign-up");
     //    header("Location:home");
         // require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/signIn_Up_controller.php");

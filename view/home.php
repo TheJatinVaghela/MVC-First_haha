@@ -1,10 +1,10 @@
 <?php  //require_once('/Xampp/xammp/htdocs/php/project_one/view/header.php');?>
 <?php
-if (extension_loaded('gd') && function_exists('gd_info')) {
+/*if (extension_loaded('gd') && function_exists('gd_info')) {
     echo "GD is installed.";
 } else {
     echo "GD is not installed.";
-}?>
+}*/?>
 <div id="main">
     <div id="content" class="site-content">
 

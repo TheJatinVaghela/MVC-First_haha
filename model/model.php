@@ -84,19 +84,19 @@ class model{
             return ;
         }else if(!$sign_inData){
            
-            return;
-           /* 
-            $this->print_stuf($data);
+            // return;
+          
+            // $this->print_stuf($data);
             $data_keys = implode(",",array_keys(array_slice($data , '0', '-1')));
             $data_values = implode("' , '",array_values(array_slice($data,'0','-1')));
             
             $quiry = "insert into $table ($data_keys) values('$data_values')";
             $this->connection->query($quiry);
-            
+            echo "<script>alert(Now Sign-In);</script>";
             // $this->print_stuf($table);
             // $this->print_stuf($data_keys);
             // $this->print_stuf($data_values);
-            $this->print_stuf($quiry); */
+            // $this->print_stuf($quiry); 
         }
     }
 

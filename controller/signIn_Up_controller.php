@@ -11,8 +11,10 @@ class signIn_Up extends model
     }
 
     public function signIn_Up_Files(){
-        $this->set_url("http://localhost/php/project_one/public/sign-up");
-        $_SESSION["GotData"] = null;
+         $this->set_url("http://localhost/php/project_one/public/sign-up");
+        if($_SERVER['PATH_INFO'] == '/sign-up'){
+            $_SESSION["GotData"] = null;
+          }
 
         if(isset($_REQUEST["Sign_Up"])){ $this->register($_REQUEST,"users",false); }
         else if(isset($_REQUEST["Sign_In"])){
@@ -20,6 +22,9 @@ class signIn_Up extends model
             // $this->print_stuf($GotData);
             if($GotData->guest_admin == 1)
             {
+                $cookie_name = "guest_admin";
+                $cookie_value = $GotData->guest_admin;
+                setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
                 $_SESSION['GotData'] = $GotData;
                 header("Location:admin");
             }

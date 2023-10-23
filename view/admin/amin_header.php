@@ -59,27 +59,27 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="<?php echo $this->admin_url?>" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                         <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="admin/button" class="dropdown-item">Buttons</a>
-                            <a href="admin/typography" class="dropdown-item">Typography</a>
-                            <a href="admin/element" class="dropdown-item">Other Elements</a>
+                            <a href="<?php echo $this->admin_url?>/button" class="dropdown-item">Buttons</a>
+                            <a href="<?php echo $this->admin_url?>/typography" class="dropdown-item">Typography</a>
+                            <a href="<?php echo $this->admin_url?>/element" class="dropdown-item">Other Elements</a>
                         </div>
                     </div>
-                    <a href="admin/widget" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
-                    <a href="admin/form" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
-                    <a href="admin/table" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
-                    <a href="admin/chart" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
+                    <a href="<?php echo $this->admin_url?>/widget" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
+                    <a href="<?php echo $this->admin_url?>/form" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
+                    <a href="<?php echo $this->admin_url?>/table" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
+                    <a href="<?php echo $this->admin_url?>/chart" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="admin/users" class="dropdown-item">users table</a>
-                            <a href="admin/edit_site" class="dropdown-item">edit site</a>
-                            <a href="sign-up" class="dropdown-item">Sign Up</a>
-                            <a href="admin/404" class="dropdown-item">404 Error</a>
-                            <a href="admin/blank" class="dropdown-item">Blank Page</a>
+                            <a href="<?php echo $this->admin_url?>/users" class="dropdown-item">users table</a>
+                            <a href="<?php echo $this->admin_url?>/edit_site" class="dropdown-item">edit site</a>
+                            <a href="<?php echo $this->admin_url?>/sign-up" class="dropdown-item">Sign Up</a>
+                            <a href="<?php echo $this->admin_url?>/404" class="dropdown-item">404 Error</a>
+                            <a href="<?php echo $this->admin_url?>/blank" class="dropdown-item">Blank Page</a>
                         </div>
                     </div>
                 </div>
