@@ -1,26 +1,46 @@
 <?php
-$_SESSION["GotData"] = null;
+require_once("/Xampp/xammp/htdocs/php/project_one/model/model.php");
 
-if(isset($_REQUEST["Sign_Up"])){ $this->register($_REQUEST,"users",false); }
-else if(isset($_REQUEST["Sign_In"])){
-    $GotData = $this->register($_REQUEST,"users",true);
-    // $this->print_stuf($GotData);
-    if($GotData->guest_admin == 1)
+class signIn_Up extends model
+{
+    
+
+    private function set_url( $url )
     {
-        $_SESSION['GotData'] = $GotData;
-        header("Location:admin");
+        echo("<script>history.replaceState({},'','$url');</script>");
     }
-    else if ($GotData->guest_admin == 0)
-    {
-        $_SESSION['GotData'] = $GotData;
-        // $this->print_stuf($gotData = $_SESSION['GotData']);
-         header("Location:home");
-    }
-    else
-    {
-        // $this->print_stuf("invalid response");
+
+    public function signIn_Up_Files(){
+        $this->set_url("http://localhost/php/project_one/public/sign-up");
+        $_SESSION["GotData"] = null;
+
+        if(isset($_REQUEST["Sign_Up"])){ $this->register($_REQUEST,"users",false); }
+        else if(isset($_REQUEST["Sign_In"])){
+            $GotData = $this->register($_REQUEST,"users",true);
+            // $this->print_stuf($GotData);
+            if($GotData->guest_admin == 1)
+            {
+                $_SESSION['GotData'] = $GotData;
+                header("Location:admin");
+            }
+            else if ($GotData->guest_admin == 0)
+            {
+                $_SESSION['GotData'] = $GotData;
+                // $this->print_stuf($gotData = $_SESSION['GotData']);
+                 header("Location:home");
+            }
+            else
+            {
+                // $this->print_stuf("invalid response");
+            }
+        }
+        
+        // $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/sign_inANDsign_up.php");
+            require_once('F:/Xampp/xammp/htdocs/php/project_one/view/header.php');
+            require_once("F:/Xampp/xammp/htdocs/php/project_one/view/sign_inANDsign_up.php");
+            require_once("F:/Xampp/xammp/htdocs/php/project_one/view/footer.php");
     }
 }
 
-$this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/sign_inANDsign_up.php");
+
 ?>

@@ -1,15 +1,17 @@
 <?php
     require_once("/Xampp/xammp/htdocs/php/project_one/model/model.php");
+    require_once("/Xampp/xammp/htdocs/php/project_one/controller/admin_controller.php");
+    require_once("/Xampp/xammp/htdocs/php/project_one/controller/signIn_Up_controller.php");
     class controller extends model
     {
         
 
-        public $wp_includes = "http://localhost/php\project_one/view/wp-includes" ;
-        public $wp_content = "http://localhost/php\project_one/view/wp-content" ;
-        public $wp_json = "http://localhost/php/project_one/view/wp-json" ;
-        public $amy_movie = "http://localhost/php/project_one/view/amy_movie" ;
-        public $jatin_made = "http://localhost/php/project_one/view/jatin-made" ;
-        public $admin = "http://localhost/php/project_one/Tempate/darkpan-1.0.0/";
+        // public $wp_includes = "http://localhost/php\project_one/view/wp-includes" ;
+        // public $wp_content = "http://localhost/php\project_one/view/wp-content" ;
+        // public $wp_json = "http://localhost/php/project_one/view/wp-json" ;
+        // public $amy_movie = "http://localhost/php/project_one/view/amy_movie" ;
+        // public $jatin_made = "http://localhost/php/project_one/view/jatin-made" ;
+        // public $admin = "http://localhost/php/project_one/Tempate/darkpan-1.0.0/";
         public $sessionGotData ;
         public function __construct(){
             parent::__construct();
@@ -50,12 +52,18 @@
                             $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/book_ticket.php");
                             break;
 
-                        case ("/admin" || "/admin/users"):
-                            require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/admin_controller.php");
+                        case "/admin" || "/admin/users":
+                            echo "admin /sign-out";
+                            $admin_controller = new admin_controller();
+                            $admin_controller->admin_sites();
+                            // require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/admin_controller.php");
                             break;
                             
                         case "/sign-in" || "/sign-up":
-                            require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/signIn_Up_controller.php");                              
+                            // require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/signIn_Up_controller.php"); 
+                            echo "contoler /sign-out";                             
+                            $user = new signIn_Up();
+                            $user->signIn_Up_Files();
                             break;
                         
                            

@@ -1,12 +1,24 @@
 <?php
 class model{
 
+    
+    public $wp_includes = "http://localhost/php\project_one/view/wp-includes" ;
+    public $wp_content = "http://localhost/php\project_one/view/wp-content" ;
+    public $wp_json = "http://localhost/php/project_one/view/wp-json" ;
+    public $amy_movie = "http://localhost/php/project_one/view/amy_movie" ;
+    public $jatin_made = "http://localhost/php/project_one/view/jatin-made" ;
+    public $admin = "http://localhost/php/project_one/Tempate/darkpan-1.0.0/";
+    // public $model_sessionGotData ;
+
     private $connection;
     public $fatchdata;
     function __construct()
-    {
+    {   
+        $hostname = "localhost";
+        $directri = "root";
+        $databasename = "movie_theater";
         try {
-            $this->connection = new mysqli("localhost","root","","movie_theater");
+            $this->connection = new mysqli($hostname,$directri,"",$databasename);
             // echo "connection established";
             
         } catch (\Throwable $th) {
@@ -38,6 +50,11 @@ class model{
             return "404 Not Found";
         }
         
+    }
+
+    public function fileUpload($table,$filename){
+        $sql = "INSERT INTO ".$table." (filename) VALUES ($filename)";
+        echo $sql;
     }
 
     protected function register($data , $table , $sign_inData){

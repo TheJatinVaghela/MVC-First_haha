@@ -14,7 +14,7 @@
     </thead>
     <tbody>
       <?php
-        foreach ($fetchdata as $key => $value) {
+        foreach ($this->fetchdata as $key => $value) {
           // $this->print_stuf_controller($value->u_id);
          ?>
             <tr>
