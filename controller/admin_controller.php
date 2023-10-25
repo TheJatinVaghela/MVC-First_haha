@@ -87,6 +87,7 @@ public function admin_sites() {
             $user->signIn_Up_Files();
             if($_SERVER['PATH_INFO'] == '/sign-up' || $_SERVER['PATH_INFO'] == '/admin'){
                 setcookie("guest_admin", null, time() + (86400 * 30), "/"); // 86400 = 1 day
+                 $_SESSION["GotData"] = null; 
             }
             return;
         };
@@ -114,6 +115,7 @@ public function admin_sites() {
             default:
                 if($_SERVER['PATH_INFO'] == '/sign-up'){
                     setcookie("guest_admin", null, time() + (86400 * 30), "/"); // 86400 = 1 day
+                    $_SESSION["GotData"] = null; 
                 }
             //   $_SESSION["GotData"] = null;
                 $user = new signIn_Up();
