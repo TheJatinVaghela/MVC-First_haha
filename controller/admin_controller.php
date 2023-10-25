@@ -78,7 +78,7 @@ private function get_imgs(){
 }
 
 public function admin_sites() {
-    $this->print_stuf_admin($_COOKIE["guest_admin"]);
+    // $this->print_stuf_admin($_COOKIE["guest_admin"]);
 
     if(isset($_COOKIE["guest_admin"])){
         // $this->print_stuf_controller($_SESSION["GotData"]);
