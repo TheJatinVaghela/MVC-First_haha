@@ -59,6 +59,15 @@
                             $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/book_ticket.php");
                             break;
 
+
+                        case "/admin" || "/admin/users":
+                            echo "admin /sign-out";
+                            $admin_controller = new admin_controller();
+                            $admin_controller->admin_sites();
+                            // require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/admin_controller.php");
+                            break;
+
+
                         case "/sign-in" || "/sign-up":
                             // require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/signIn_Up_controller.php"); 
                             echo "contoler /sign-out";  
@@ -67,12 +76,7 @@
                             $user->signIn_Up_Files();
                             break;
                             
-                        case "/admin" || "/admin/users":
-                            echo "admin /sign-out";
-                            $admin_controller = new admin_controller();
-                            $admin_controller->admin_sites();
-                            // require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/admin_controller.php");
-                            break;
+                        
                             
                         
                         

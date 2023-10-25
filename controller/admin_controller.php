@@ -78,13 +78,15 @@ private function get_imgs(){
 }
 
 public function admin_sites() {
-    if(isset($_SESSION["GotData"])){
+    $this->print_stuf_admin($_COOKIE["guest_admin"]);
+
+    if(isset($_COOKIE["guest_admin"])){
         // $this->print_stuf_controller($_SESSION["GotData"]);
-        if($_SESSION["GotData"]->guest_admin != 1){
+        if($_COOKIE["guest_admin"] != 1){
             $user = new signIn_Up();
             $user->signIn_Up_Files();
             if($_SERVER['PATH_INFO'] == '/sign-up' || $_SERVER['PATH_INFO'] == '/admin'){
-                $_SESSION["GotData"] = null;
+                setcookie("guest_admin", null, time() + (86400 * 30), "/"); // 86400 = 1 day
             }
             return;
         };
@@ -110,23 +112,23 @@ public function admin_sites() {
                 break;
 
             default:
-            if($_SERVER['PATH_INFO'] == '/sign-up'){
-              $_SESSION["GotData"] = null;
-            }
+                if($_SERVER['PATH_INFO'] == '/sign-up'){
+                    setcookie("guest_admin", null, time() + (86400 * 30), "/"); // 86400 = 1 day
+                }
             //   $_SESSION["GotData"] = null;
-              $user = new signIn_Up();
-              $user->signIn_Up_Files();
+                $user = new signIn_Up();
+                $user->signIn_Up_Files();
             // header("Location:http://localhost/php/project_one/public/sign-up");
                 //  require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/signIn_Up_controller.php");
                  break;
-                
+                return;
         }
        
     }else{ 
       
-             $user = new signIn_Up();
-             $user->signIn_Up_Files();
-            
+              $user = new signIn_Up();
+              $user->signIn_Up_Files();
+                return;
         //  header("Location:http://localhost/php/project_one/public/sign-up");
     //    header("Location:home");
         // require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/signIn_Up_controller.php");
@@ -138,6 +140,12 @@ protected function admin_inbitwin($file){
     require_once("F:/Xampp/xammp/htdocs/php/project_one/view/admin/amin_header.php");
     require_once($file);
     require_once("F:/Xampp/xammp/htdocs/php/project_one/view/admin/admin_footer.php");
+}
+
+protected function print_stuf_admin($data){
+    echo "<pre>";
+    print_r($data);
+    echo "</pre>";
 }
 
 }
