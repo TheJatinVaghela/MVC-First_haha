@@ -1,7 +1,7 @@
 <?php
 
-require_once("/Xampp/xammp/htdocs/php/project_one/model/model.php");
-require_once("/Xampp/xammp/htdocs/php/project_one/controller/signIn_Up_controller.php");
+require_once("../model/model.php");
+require_once("../controller/signIn_Up_controller.php");
 class admin_controller extends model
 {
 
@@ -55,11 +55,11 @@ private function get_imgs(){
         $img_name = $_FILES["fileUpload"]["name"];
         if($img_name != null){$id= uniqid().time();}
         
-        $destination = "F:/Xampp/xammp/htdocs/php/project_one/assets/edit_site_imgs";
+        $destination = "../assets/edit_site_imgs";
         move_uploaded_file($_FILES["fileUpload"]["tmp_name"],$destination."/".$id.$img_name);
         
-        $sourceDir = 'F:/Xampp/xammp/htdocs/php/project_one/assets/edit_site_imgs/';
-        $destinationDir = 'F:/Xampp/xammp/htdocs/php/project_one/assets/edit_site_webp';
+        $sourceDir = '../assets/edit_site_imgs/';
+        $destinationDir = '../assets/edit_site_webp';
         try {
             $this->convertImagesToWebP($sourceDir, $destinationDir);
             $this->fileUpload("files", $img_name);
@@ -121,22 +121,23 @@ public function admin_sites() {
         switch ($_SERVER['PATH_INFO']) {
             case '/admin':
                
-                $this->admin_inbitwin("F:/Xampp/xammp/htdocs/php/project_one/view/admin/admin.php");
+                $this->admin_inbitwin("../view/admin/admin.php");
                 break;
                 
             
             case '/admin/users':
                 $_SERVER['PATH_INFO'] ="/admin/users"; 
                  $this->updateUser();
-                $this->admin_inbitwin("F:/Xampp/xammp/htdocs/php/project_one/view/admin/admin_users.php");
+                $this->admin_inbitwin("../view/admin/admin_users.php");
                 break;    
                 
             case '/admin/edit_site':
                 $_SERVER['PATH_INFO'] ="/admin/edit_site"; 
                 // $this->print_stuf_admin($_REQUEST["saveuser"]);
                 $this->get_imgs();
-                 $this->updating_user();
-                $this->admin_inbitwin("F:/Xampp/xammp/htdocs/php/project_one/view/admin/edit_site.php");
+                $this->updating_user();
+                
+                $this->admin_inbitwin("../view/admin/edit_site.php");
                 break;
 
             default:
@@ -148,7 +149,7 @@ public function admin_sites() {
                 $user = new signIn_Up();
                 $user->signIn_Up_Files();
             // header("Location:http://localhost/php/project_one/public/sign-up");
-                //  require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/signIn_Up_controller.php");
+                //  require_once("../controller/signIn_Up_controller.php");
                  break;
                 return;
         }
@@ -160,15 +161,15 @@ public function admin_sites() {
                 return;
         //  header("Location:http://localhost/php/project_one/public/sign-up");
     //    header("Location:home");
-        // require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/signIn_Up_controller.php");
+        // require_once("../controller/signIn_Up_controller.php");
     }
 }
 
 protected function admin_inbitwin($file){
     $fetchdata = $this->fetchdata;
-    require_once("F:/Xampp/xammp/htdocs/php/project_one/view/admin/amin_header.php");
+    require_once("../view/admin/amin_header.php");
     require_once($file);
-    require_once("F:/Xampp/xammp/htdocs/php/project_one/view/admin/admin_footer.php");
+    require_once("../view/admin/admin_footer.php");
 }
 
 protected function print_stuf_admin($data){

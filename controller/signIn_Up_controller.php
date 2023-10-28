@@ -1,5 +1,5 @@
 <?php
-require_once("/Xampp/xammp/htdocs/php/project_one/model/model.php");
+require_once("../model/model.php");
 
 class signIn_Up extends model
 {
@@ -46,9 +46,9 @@ class signIn_Up extends model
         }
         
         // $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/sign_inANDsign_up.php");
-            require_once('F:/Xampp/xammp/htdocs/php/project_one/view/header.php');
-            require_once("F:/Xampp/xammp/htdocs/php/project_one/view/sign_inANDsign_up.php");
-            require_once("F:/Xampp/xammp/htdocs/php/project_one/view/footer.php");
+            require_once('../view/header.php');
+            require_once("../view/sign_inANDsign_up.php");
+            require_once("../view/footer.php");
             return;
     }
 }

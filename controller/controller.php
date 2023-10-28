@@ -1,7 +1,7 @@
 <?php
-    require_once("/Xampp/xammp/htdocs/php/project_one/model/model.php");
-    require_once("/Xampp/xammp/htdocs/php/project_one/controller/admin_controller.php");
-    require_once("/Xampp/xammp/htdocs/php/project_one/controller/signIn_Up_controller.php");
+    require_once("../model/model.php");
+    require_once("../controller/admin_controller.php");
+    require_once("../controller/signIn_Up_controller.php");
     class controller extends model
     {
         
@@ -31,32 +31,32 @@
                                
                             };
                             // $data = $this->SendDataToController();
-                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/home.php");
+                            $this->header_footer_inbeetwine("../view/home.php");
                             break;
 
                         case '/now-playing':
                            
-                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/now_playing.php");
+                            $this->header_footer_inbeetwine("../view/now_playing.php");
                             break;
                         
                         case "/coming-soon":
                            
-                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/comming_soon.php");
+                            $this->header_footer_inbeetwine("../view/comming_soon.php");
                             break;
 
                         case "/single-movie":
                             
-                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/single_moive.php");
+                            $this->header_footer_inbeetwine("../view/single_moive.php");
                             break;
 
                         case "/Daily-Showtime-Layout-List":
                             
-                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/daily_showtime_single_list.php");
+                            $this->header_footer_inbeetwine("../view/daily_showtime_single_list.php");
                             break;
 
                         case "/book-ticket":
                         
-                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/book_ticket.php");
+                            $this->header_footer_inbeetwine("../view/book_ticket.php");
                             break;
 
 
@@ -64,12 +64,12 @@
                             echo "admin /sign-out";
                             $admin_controller = new admin_controller();
                             $admin_controller->admin_sites();
-                            // require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/admin_controller.php");
+                            // require_once("../controller/admin_controller.php");
                             break;
 
 
                         case "/sign-in" || "/sign-up":
-                            // require_once("F:/Xampp/xammp/htdocs/php/project_one/controller/signIn_Up_controller.php"); 
+                            // require_once("../controller/signIn_Up_controller.php"); 
                             echo "contoler /sign-out";  
                             // $_SESSION["GotData"] = null;                           
                             $user = new signIn_Up();
@@ -84,7 +84,7 @@
 
                         default:
                             // echo "inside default";
-                            $this->header_footer_inbeetwine("F:/Xampp/xammp/htdocs/php/project_one/view/_404_not_found.php");
+                            $this->header_footer_inbeetwine("../view/_404_not_found.php");
                         break;
                     }
                 }
@@ -97,9 +97,9 @@
         }
         private function header_footer_inbeetwine($file){
            
-            require_once('F:/Xampp/xammp/htdocs/php/project_one/view/header.php');
+            require_once('../view/header.php');
             require_once($file);
-            require_once("F:/Xampp/xammp/htdocs/php/project_one/view/footer.php");
+            require_once("../view/footer.php");
         }
 
         public function print_stuf_controller($data){
