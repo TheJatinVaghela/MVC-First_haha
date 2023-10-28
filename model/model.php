@@ -57,6 +57,19 @@ class model{
         echo $sql;
     }
 
+    public function edituser($table, $id){
+        $getuserinfo = "SELECT * FROM ".$table." WHERE u_id = $id"; 
+        // $this->print_stuf($getuserinfo);
+        $sqlex = $this->connection->query($getuserinfo);
+        if($sqlex->num_rows > 0) {  
+            $this->fatchdata = $sqlex->fetch_object();
+        }
+        return $this->fatchdata;
+
+        
+        // $sql = "UPDATE $table SET "
+    }   
+
     protected function register($data , $table , $sign_inData){
         if($sign_inData){
         //   $this->print_stuf($data);

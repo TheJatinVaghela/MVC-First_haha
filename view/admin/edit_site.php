@@ -11,6 +11,25 @@
   <input type="submit" value="Upload Image" name="submit">
 </form>
 
+<br>
+<?php //print_r( $_SESSION["edituserinfo"]);?>
+<form action="" method="post" >
+  <?php foreach ($_SESSION["edituserinfo"] as $key => $value) { ?>
+    <?php if($key == 'guest_admin'){?>
+      <!-- <select class="dropdown form-control" name="<?php echo $key;?>" id="">
+        <option value="1">Admin</option>
+        <option value="0">User</option>
+      </select> -->
+      <?php break;}?>
+    <label class="form-label" for=""><?php echo $key;?></label>
+      <input class="form-controle" type="text" name="<?php echo $key;?>" placeholder="<?php echo $value;?> "  value="<?php echo $value;?>">
+    
+  <?php } ; ?>
+  <button type="submit" name="saveuser" value="saveuser">save</button>
+</form>
+
+<?php print_r($_REQUEST["saveuser"])?>
+
 <script>
 document.getElementById("drop_zone").ondragover = function(event) {
   event.preventDefault();

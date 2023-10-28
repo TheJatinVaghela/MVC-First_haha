@@ -6,6 +6,7 @@ class admin_controller extends model
 {
 
     public $fetchdata ; 
+    public $getuserdata;
     public $admin_url = "http://localhost/php/project_one/public/admin";
     /**
      * Convert images in a directory to WebP format and save them to another directory.
@@ -77,12 +78,35 @@ private function get_imgs(){
     }
 }
 
+private function updateUser(){
+    if(isset($_REQUEST['updateUser'])){
+        $this->print_stuf_admin($_REQUEST['updateUser']);
+        $this->getuserdata = $this->edituser("users",$_REQUEST['updateUser']);
+        unset($this->getuserdata->u_id);
+        // $this->print_stuf_admin($this->getuserdata);
+         $_SESSION["edituserinfo"] = $this->getuserdata;
+         header("Location:edit_site");
+    }else{
+        $this->print_stuf_admin("no updateUser");
+    }
+}
+
+private function updating_user(){
+    if (isset($_REQUEST["saveuser"])) {
+        $this->print_stuf_admin($_REQUEST["saveuser"]);
+        // return;
+    } else {
+        // return;
+    }
+    
+}
+
 public function admin_sites() {
     // $this->print_stuf_admin($_COOKIE["guest_admin"]);
 
-    if(isset($_COOKIE["guest_admin"])){
+    if(isset($_SESSION["GotData"])){
         // $this->print_stuf_controller($_SESSION["GotData"]);
-        if($_COOKIE["guest_admin"] != 1){
+        if($_SESSION["GotData"]->guest_admin != 1){
             $user = new signIn_Up();
             $user->signIn_Up_Files();
             if($_SERVER['PATH_INFO'] == '/sign-up' || $_SERVER['PATH_INFO'] == '/admin'){
@@ -103,12 +127,15 @@ public function admin_sites() {
             
             case '/admin/users':
                 $_SERVER['PATH_INFO'] ="/admin/users"; 
+                 $this->updateUser();
                 $this->admin_inbitwin("F:/Xampp/xammp/htdocs/php/project_one/view/admin/admin_users.php");
                 break;    
                 
             case '/admin/edit_site':
                 $_SERVER['PATH_INFO'] ="/admin/edit_site"; 
-               $this->get_imgs();
+                // $this->print_stuf_admin($_REQUEST["saveuser"]);
+                $this->get_imgs();
+                 $this->updating_user();
                 $this->admin_inbitwin("F:/Xampp/xammp/htdocs/php/project_one/view/admin/edit_site.php");
                 break;
 
