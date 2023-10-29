@@ -92,8 +92,8 @@ private function updateUser(){
 }
 
 private function updating_user(){
-    if (isset($_REQUEST["saveuser"])) {
-        $this->print_stuf_admin($_REQUEST["saveuser"]);
+    if (isset($_REQUEST)) {
+        $this->print_stuf_admin($_REQUEST);
         // return;
     } else {
         // return;
