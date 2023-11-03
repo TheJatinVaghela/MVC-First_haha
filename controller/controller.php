@@ -27,8 +27,6 @@
                         case '/home':
                             if(isset($_SESSION["GotData"])){
                                 $this->sessionGotData = $_SESSION["GotData"];
-                                
-                               
                             };
                             // $data = $this->SendDataToController();
                             $this->header_footer_inbeetwine("../view/home.php");
@@ -61,7 +59,7 @@
 
 
                         case "/admin" || "/admin/users":
-                            echo "admin /sign-out";
+                            // echo "admin /sign-out";
                             $admin_controller = new admin_controller();
                             $admin_controller->admin_sites();
                             // require_once("../controller/admin_controller.php");

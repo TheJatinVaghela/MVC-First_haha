@@ -17,11 +17,13 @@ class admin_controller extends model
 private function convertImagesToWebP($sourceDir, $destinationDir) {
     // Get all files in the source directory
     $files = scandir($sourceDir);
-    
+    array_shift($files);
+    array_shift($files);
+    $this->print_stuf_admin($files);
     // Loop through each file in the source directory
     foreach ($files as $file) {
         // Check if the file is an image (you can modify the condition as needed)
-        if (is_file($sourceDir . '/' . $file) && in_array(pathinfo($file, PATHINFO_EXTENSION), ['jpg', 'jpeg', 'png', 'gif'])) {
+        if (is_file($sourceDir . '/' . $file) && in_array(pathinfo($file, PATHINFO_EXTENSION), ['jpg', 'jpeg', 'png', 'gif','webp'])) {
             // Create a new image from the source file
             $image = imagecreatefromstring(file_get_contents($sourceDir . '/' . $file));
             
@@ -37,12 +39,14 @@ private function convertImagesToWebP($sourceDir, $destinationDir) {
             echo "Converted: " . $file . "\n";            
         }
     }
-    $files = glob($sourceDir.'*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+    $files = glob($sourceDir.'/'.'*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+    // $this->print_stuf_admin("in ");
+    // $this->print_stuf_admin($files);
     foreach($files as $file){
         if(is_file($file))
         unlink($file);
     }
-    
+    return $newFilename;
     // echo "Conversion completed!";
 }
 
@@ -53,28 +57,50 @@ private function get_imgs(){
         echo "</pre>";
         $id='';
         $img_name = $_FILES["fileUpload"]["name"];
-        if($img_name != null){$id= uniqid().time();}
+        if($img_name != null){
+            $id= uniqid().time();
+            $img_name = $id.$_FILES["fileUpload"]["name"];
+        }
         
         $destination = "../assets/edit_site_imgs";
-        move_uploaded_file($_FILES["fileUpload"]["tmp_name"],$destination."/".$id.$img_name);
+        move_uploaded_file($_FILES["fileUpload"]["tmp_name"],$destination."/".$img_name);
         
-        $sourceDir = '../assets/edit_site_imgs/';
+        $sourceDir = '../assets/edit_site_imgs';
         $destinationDir = '../assets/edit_site_webp';
+        
         try {
-            $this->convertImagesToWebP($sourceDir, $destinationDir);
-            $this->fileUpload("files", $img_name);
+            if($_FILES["fileUpload"]["type"] != 'image/webp'){
+
+                $newfilename=$this->convertImagesToWebP($sourceDir, $destinationDir);
+            }
+            
         } catch (Exception $e) {
             // Log the error
             error_log('Image conversion error: ' . $e->getMessage());
+            $error = $e;
             // Display user-friendly error message
             echo 'An error occurred during image conversion. Please try again later.';
             // Optionally, terminate the script execution
             exit();
         }
-        
+
+        $img_name = $destinationDir."/".$id.$newfilename;
+        $position = $_REQUEST["submit"];
+        $error="null";
+        $this->print_stuf_admin($_FILES["fileUpload"]["type"]);
+
+        if($error == "null"){
+            $this->fileUpload("files", $img_name,$position);
+
+        }else{
+            $this->print_stuf_admin($error);
+        }
         
     }else{
         // echo "no File";
+        // if(isset($_REQUEST["saveuser"])){
+        //     $this->print_stuf_admin($_FILES);
+        // }
     }
 }
 
@@ -82,21 +108,29 @@ private function updateUser(){
     if(isset($_REQUEST['updateUser'])){
         $this->print_stuf_admin($_REQUEST['updateUser']);
         $this->getuserdata = $this->edituser("users",$_REQUEST['updateUser']);
-        unset($this->getuserdata->u_id);
+       
+        //  unset($this->getuserdata->u_id);
         // $this->print_stuf_admin($this->getuserdata);
          $_SESSION["edituserinfo"] = $this->getuserdata;
+
          header("Location:edit_site");
     }else{
-        $this->print_stuf_admin("no updateUser");
+        // $this->print_stuf_admin("no updateUser");
     }
 }
 
-private function updating_user(){
-    if (isset($_REQUEST)) {
-        $this->print_stuf_admin($_REQUEST);
-        // return;
+public function updating_user(){
+    if (isset($_REQUEST["u_id"])) {
+        
+        // $this->print_stuf_admin($_SESSION["edituserinfo"]);
+        // $this->print_stuf_admin($_REQUEST);
+        $set = $this->update_user("users",$_REQUEST);
+        if($set == true){
+            header("Location:users");
+        }
+        //  return;
     } else {
-        // return;
+         return;
     }
     
 }
@@ -128,6 +162,12 @@ public function admin_sites() {
             case '/admin/users':
                 $_SERVER['PATH_INFO'] ="/admin/users"; 
                  $this->updateUser();
+                 if(isset($_REQUEST["deleteUser"])){
+                   $set = $this->deletuser("users",$_REQUEST["deleteUser"]);
+                   if($set == true){
+                    header("Location:users");
+                   }
+                 }
                 $this->admin_inbitwin("../view/admin/admin_users.php");
                 break;    
                 
@@ -136,7 +176,16 @@ public function admin_sites() {
                 // $this->print_stuf_admin($_REQUEST["saveuser"]);
                 $this->get_imgs();
                 $this->updating_user();
-                
+                if(isset($_REQUEST["add_new_user"])){
+                    array_pop($_REQUEST);
+                    // $this->print_stuf_admin($_REQUEST);
+                    $set = $this->insertuser("users",$_REQUEST);
+                    if($set == true){
+                        header("Location:users");
+                    }else if($set != true){
+                        echo "THERE IS ERROR";
+                    }
+                }
                 $this->admin_inbitwin("../view/admin/edit_site.php");
                 break;
 

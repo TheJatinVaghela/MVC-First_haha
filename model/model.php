@@ -52,9 +52,11 @@ class model{
         
     }
 
-    public function fileUpload($table,$filename){
-        $sql = "INSERT INTO ".$table." (filename) VALUES ($filename)";
-        echo $sql;
+    public function fileUpload($table,$filename,$position){
+        $sql = "INSERT INTO ".$table." (position , filename) VALUES ('$position','$filename')";
+         $sqlex = $this->connection->query($sql);
+        // $this->print_stuf($sql);
+        return;
     }
 
     public function edituser($table, $id){
@@ -70,6 +72,72 @@ class model{
         // $sql = "UPDATE $table SET "
     }   
 
+    public function update_user($table , $data){
+        // $this->print_stuf($table);
+        // $this->print_stuf($data);
+        $id = $data["u_id"];
+        array_pop($data);
+        $sql = "UPDATE ".$table." SET ";
+        foreach ($data as $key => $value) {
+           
+            $sql.=$key." = ";
+            $sql.="'";
+            $sql.=$value;
+            $sql.="'".", ";
+        }
+        $sql = substr($sql, 0, -2);
+        $sql .= " WHERE u_id = " . $id;
+        $this->print_stuf($sql);
+        try {
+            $sqlex = $this->connection->query($sql);
+            if($sqlex == 1){
+                return true;
+            }
+        } catch (\Throwable $th) {
+            echo $th->getMessage();
+        }
+    }
+    public function deletuser($table, $id){
+        $sql = "DELETE FROM ".$table." WHERE u_id = ".$id;
+        try {
+            $sqlex = $this->connection->query($sql);
+            if($sqlex == 1){
+                return true;
+            }else{
+                $this->print_stuf($sql);
+                return false;
+            }
+        } catch (\Throwable $th) {
+            echo $th->getMessage();
+            return false;
+        }
+        
+    }
+
+    public function insertuser($table, $data){
+        $key = array_keys($data);
+        $value = array_values($data);
+         $this->print_stuf($value);
+        $sql = "INSERT INTO ".$table."( ";
+        foreach ($key as $keys => $values) {
+            $sql .= $values.", "; 
+        }
+        $sql = substr($sql, 0, -2);
+        $sql .= " ) VALUES ( ";
+        foreach ($value as $key => $values) {
+            $sql .= "'";
+            $sql .= $values."', ";
+            
+        }
+         $sql = substr($sql, 0, -2);
+         $sql .= " )";
+         $sqlex = $this->connection->query($sql);
+         if($sqlex == 1){
+            return true;
+         }else{
+            return false;
+         }
+    }
     protected function register($data , $table , $sign_inData){
         if($sign_inData){
         //   $this->print_stuf($data);
