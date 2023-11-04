@@ -9,14 +9,22 @@
   <div id="drop_zone" name="input_img" style="width:200px; height:200px; border:1px solid #ccc; text-align:center; line-height:180px; overflow:none;">
     Drop image here
   </div>
+
+  <label for="drop_zone">Hero IMG</label>
+  <input type="file" id="fileUpload" name="fileUpload" accept="image/*" style="display:none"/>
+  <div id="drop_zone" name="input_img" style="width:200px; height:200px; border:1px solid #ccc; text-align:center; line-height:180px; overflow:none;">
+    Drop image here
+  </div>
   <input type="submit" value="HeroIMG" name="submit">
 </form>
 
 <br>
 <?php //print_r( $_SESSION["edituserinfo"]);
 ?>
-<h1>EDIT USER</h1>
-<?php foreach ($_SESSION["edituserinfo"] as $key => $value) { ?>
+<?php 
+if(isset($_SESSION["edituserinfo"])){
+  echo "<h1>EDIT USER</h1>";
+  foreach ($_SESSION["edituserinfo"] as $key => $value) { ?>
   <form action="" method="post" >
   <?php 
 
@@ -36,9 +44,11 @@
      <?php } ?>
       
     
-     <?php } ;?>
-     <button type="submit" name="u_id" value="<?php echo $_SESSION["edituserinfo"]->u_id ?>">save</button>
-     </form>
+     <?php }
+     $id= $_SESSION["edituserinfo"]->u_id;
+     print_r("<button type='submit' name='u_id' value='$id'>save</button>");
+     echo '</form>';
+    } ;?>
   
 <h1>ADD USER</h1>
 <form action="" method="post">
