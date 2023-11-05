@@ -31,6 +31,19 @@
 
     <!-- Template Stylesheet -->
     <link href="<?php echo $this->admin;?>css/style.css" rel="stylesheet">
+    <style>
+        .admin-style{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            /* justify-content: space-around; */
+            gap: 1rem;
+            padding: 1rem;
+        }
+        .Add-user-form-input{
+            margin-top: .5rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -61,29 +74,12 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="<?php echo $this->admin_url?>" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <div class="nav-item dropdown">
-                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="<?php echo $this->admin_url?>/button" class="dropdown-item">Buttons</a>
-                            <a href="<?php echo $this->admin_url?>/typography" class="dropdown-item">Typography</a>
-                            <a href="<?php echo $this->admin_url?>/element" class="dropdown-item">Other Elements</a>
-                        </div>
-                    </div>
-                    <a href="<?php echo $this->admin_url?>/widget" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
-                    <a href="<?php echo $this->admin_url?>/form" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
-                    <a href="<?php echo $this->admin_url?>/table" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
-                    <a href="<?php echo $this->admin_url?>/chart" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="<?php echo $this->admin_url?>/users" class="dropdown-item">users table</a>
-                            <a href="<?php echo $this->admin_url?>/edit_site" class="dropdown-item">edit site</a>
-                            <a href="<?php echo $this->admin_url?>/sign-up" class="dropdown-item">Sign Up</a>
-                            <a href="<?php echo $this->admin_url?>/404" class="dropdown-item">404 Error</a>
-                            <a href="<?php echo $this->admin_url?>/blank" class="dropdown-item">Blank Page</a>
-                        </div>
-                    </div>
+                    <a href="<?php echo $this->admin_url?>" class="nav-item nav-link active mb-1"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="<?php echo $this->admin_url?>/users" class="nav-item nav-link active mb-1"> <i class="fa fa-users me-2"></i> users table</a>
+                    <a href="<?php echo $this->admin_url?>/edit_site" class="nav-item nav-link active mb-1"> <i class="fa fa-pencil-alt me-2"></i> edit site</a>
+                    <a href="<?php echo $this->admin_url?>/sign-up" class="nav-item nav-link active mb-1"> <i class="fa fa-sign-in-alt me-2"></i> Sign Up</a>
+                    <a href="<?php echo $this->admin_url?>/404" class="nav-item nav-link active mb-1"> <i class="fa fa-exclamation-triangle me-2"></i> 404 Error</a>
+                    <a href="<?php echo $this->admin_url?>/blank" class="nav-item nav-link active mb-1"> <i class="fa fa-ban me-2"></i> Blank Page</a>
                 </div>
             </nav>
         </div>
@@ -104,79 +100,14 @@
                     <input class="form-control bg-dark border-0" type="search" placeholder="Search">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-envelope me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Message</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="<?php echo $this->admin;?>img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="<?php echo $this->admin;?>img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="<?php echo $this->admin;?>img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item text-center">See all message</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-bell me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Notificatin</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">Profile updated</h6>
-                                <small>15 minutes ago</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">New user added</h6>
-                                <small>15 minutes ago</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">Password changed</h6>
-                                <small>15 minutes ago</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item text-center">See all notifications</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                    <div class="admin-style">
+                        <a href="#" class="" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="<?php echo $this->admin;?>img/user.jpg" alt="" style="width: 40px; height: 40px;">
                             <span class="d-none d-lg-inline-flex"><?php echo $_SESSION["GotData"]->user_name;?></span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="admin/MyProfile" class="dropdown-item">My Profile</a>
-                            <a href="admin/Settings" class="dropdown-item">Settings</a>
-                            <a href="sign-up" class="dropdown-item">Log Out</a>
-                        </div>
+                            <a href="admin/MyProfile" class="">My Profile</a>
+                            <a href="admin/Settings" class="">Settings</a>
+                            <a href="sign-up" class="">Log Out</a>
                     </div>
                 </div>
             </nav>

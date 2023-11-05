@@ -51,25 +51,29 @@ if(isset($_SESSION["edituserinfo"])){
     } ;?>
   
 <h1>ADD USER</h1>
-<form action="" method="post">
-  <label for="adduser_name">name</label>
-  <input type="text" name="user_name" id="adduser_name" required placeholder="name">
+<form action="" method="post" style="
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+">
+  <label for="adduser_name" class="Add-user-form-input">name</label>
+  <input type="text" name="user_name" id="adduser_name" required="" placeholder="name">
 
-  <label for="adduser_mail">mail</label>
-  <input type="text" name="user_mail" id="adduser_mail" required placeholder="mail">
+  <label for="adduser_mail" class="Add-user-form-input">mail</label>
+  <input type="text" name="user_mail" id="adduser_mail" required="" placeholder="mail">
 
-  <label for="adduser_phone">phone</label>
-  <input type="text" name="user_mobile" pattern="[6789][0-9]{9}" id="adduser_phone" required placeholder="phone">
+  <label for="adduser_phone" class="Add-user-form-input">phone</label>
+  <input type="text" name="user_mobile" pattern="[6789][0-9]{9}" id="adduser_phone" required="" placeholder="phone">
   
-  <label for="adduser_password">password</label>
-  <input type="text" name="user_password" id="adduser_password" required placeholder="password">
+  <label for="adduser_password" class="Add-user-form-input">password</label>
+  <input type="text" name="user_password" id="adduser_password" required="" placeholder="password" class="Add-user-form-input">
 
-  <select class="dropdown form-control" name="guest_admin" id="">
+  <select class="dropdown form-control Add-user-form-input" name="guest_admin" id="">
     <option value="0">User</option>
     <option value="1">Admin</option>
   </select> 
 
-  <button type="submit" name="add_new_user" value="add_new_user">ADD USER</button>
+  <button type="submit" name="add_new_user" value="add_new_user" class="Add-user-form-input">ADD USER</button>
 </form>
 
 

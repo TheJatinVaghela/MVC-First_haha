@@ -429,12 +429,16 @@
         #amy-page-header {
             background-image: url("<?php echo $this->wp_content?>/uploads/sites/12/2022/05/img_48.jpg");
         }
-        
-    </style>
+        .Input-Movie-date:checked{
+            background-color: #00d084;
+        }
+    </style>    
+      
         
         <link rel="stylesheet" href="<?php echo $this->jatin_made?>/sign_inANDsign_up.css">
         <link rel="stylesheet" href="<?php echo $this->jatin_made?>/_404_not_found.css">
         <link rel="stylesheet" href="<?php echo $this->jatin_made?>/admin.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <?php

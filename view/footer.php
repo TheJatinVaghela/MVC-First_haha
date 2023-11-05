@@ -223,7 +223,7 @@
     </script>
     <script type='text/javascript' src='<?php echo $this->wp_content?>/plugins/elementor/assets/js/frontend.min3ab2.js?ver=3.6.5'
         id='elementor-frontend-js'></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 
